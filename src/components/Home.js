@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import bg101 from '../assets/images/bg/bg1.svg';
 import mascot1 from '../assets/images/mascot/mascot1.png';
+import SectionContainer from './SectionContainer';
 
 const sectionHeight = "70vmax";
 
-const StyledDiv = styled.div`
-  position: relative;
-  width: 100%;
+const HomeContainer = styled(SectionContainer)`
   height: ${sectionHeight};
   background-image: url(${props => props.bg});
   background-size: cover;
@@ -31,31 +30,31 @@ const MascotContainer = styled.div`
 const LogoTypo = styled.div`
   position: absolute;
   width: 100%;
-  top: 4.5vw;
+  top: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   .primary {
     position: relative;
-    left: -5vw;
-    font-size: 7.5vw;
+    left: -6vw;
+    font-size: 9vw;
     font-weight: 700;
     color: #ff7e7e;
   }
   .secondary {
     position: relative;
-    top: -1.8vw;
-    left: 9vw;
-    font-size: 2.5vw;
-    letter-spacing: .26em;
+    top: -2.4vw;
+    left: 12vw;
+    font-size: 3.2vw;
+    letter-spacing: .27em;
     color: white;
   }
 `;
 
 function Home() {
 	return (
-    <StyledDiv className="home" bg={bg101}>
+    <HomeContainer className="home" bg={bg101}>
       <LogoTypo>
         <h1 className="primary">Sapporo</h1>
         <h2 className="secondary">snow festival</h2>
@@ -63,7 +62,7 @@ function Home() {
       <MascotContainer>
         <img src={mascot1} alt="Main mascot"/>
       </MascotContainer>
-    </StyledDiv>
+    </HomeContainer>
 	)
 }
 
