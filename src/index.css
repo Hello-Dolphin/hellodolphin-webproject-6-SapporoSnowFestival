@@ -1,13 +1,31 @@
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Mali Regular'), local('Mali-Regular'),
+       url('./assets/fonts/mali-v4-thai_latin-regular.woff2') format('woff2'),
+       url('./assets/fonts/mali-v4-thai_latin-regular.woff') format('woff');
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+  font-family: 'Mali', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1C2B2D;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* mali-regular - thai_latin */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
