@@ -1,6 +1,6 @@
 function NavItem(props) {
 	return (
-		<li className="nav-item">
+		<li>
       <a href={props.to}>
         {props.text || props.children}
       </a>

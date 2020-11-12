@@ -1,13 +1,18 @@
 import './App.css';
-import Nav from './components/Nav';
+import MainNav from './components/MainNav';
 import Home from './components/Home';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  height: 15000px;
+`;
 
 function App() {
   return (
-    <div>
-      <Nav />
+    <Container>
+      <MainNav />
       <Home />
-    </div>
+    </Container>
   );
 }
 
