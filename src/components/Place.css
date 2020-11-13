@@ -40,7 +40,7 @@ p{
     color: #D8E9F0;
     position: relative;
     left: 100px;
-    top: -350px; 
+    top: -500px; 
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -50,10 +50,7 @@ p{
     font-weight: bold;
     cursor: pointer;
 }
-/* .button:active{
-    background-color: #FF7E7E;
-    color: #D8E9F0;
-} */
+
 .button:hover{
     background-color: white;
     color: #FF7E7E;
@@ -77,4 +74,11 @@ p{
     background-color: white;
     color: #FF7E7E;
     box-shadow: 0px 0px 10px 10px #FF7E7E;
+}
+.mascot4{
+    width: 210px;
+    height: 220px;
+    position: relative;
+    left: 500px;
+    top: -260px;
 }

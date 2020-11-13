@@ -3,6 +3,7 @@ import './Place.css';
 import place1 from '../assets/images/place/place1.png';
 import place2 from '../assets/images/place/place2.png';
 import place3 from '../assets/images/place/place3.png';
+import mascot4 from '../assets/images/mascot/mascot4.png';
 
 class Place extends React.Component {
 
@@ -37,7 +38,9 @@ class Place extends React.Component {
 
         <button class="button btn1" type="button" onClick={this.changeOdori}>1</button>
         <button class="button btn2" type="button" onClick={this.changeTsudome}>2</button>
-        <button class="button btn3" type="button" onClick={this.changeSusukino}>3</button>    
+        <button class="button btn3" type="button" onClick={this.changeSusukino}>3</button>
+
+        <img src={mascot4} className="mascot4"/>   
     </div>        
         )
     }
