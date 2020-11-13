@@ -1,0 +1,38 @@
+ .content{
+    margin: 482px 135px 463px 135px;
+    width: 565px;
+}
+
+h2{
+    color: #FF7E7E;
+    font-size: 64px;
+}
+p{
+    color: #D8E9F0;
+    font-size: 24px;
+    text-align: justify;
+    line-height: 40px;
+    
+}
+.odori p{
+    text-indent: 96px;
+}
+.tsudome p{
+    text-indent: 60px;
+}
+.susukino P{
+    text-indent: 96px;
+}
+.img{
+    width: 560px;
+    height: 383px;
+    border: 5px solid white;
+    border-radius: 70px;
+    position: relative;
+    left: 700px;
+    top: -270px;
+}
+
+ิี.oo{
+  background-color: red;
+}
