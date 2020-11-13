@@ -1,16 +1,8 @@
 import styled from 'styled-components';
-import bg101 from '../assets/images/bg/bg1.svg';
+import bg1 from '../assets/images/bg/bg1.png';
 import mascot1 from '../assets/images/mascot/mascot1.png';
 import SectionContainer from './SectionContainer';
-
-let sectionHeight;
-
-const HomeContainer = styled(SectionContainer)`
-  background-image: url(${props => props.bg});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center -30vw;
-`;
+import SectionContainerBG from './SectionContainerBG';
 
 const MascotContainer = styled(SectionContainer)`
   display: flex;
@@ -18,8 +10,8 @@ const MascotContainer = styled(SectionContainer)`
   align-items: center;
   & img {
     position: relative;
-    top: -3.5vmax;
-    width: 15vmax;
+    top: -3.5vw;
+    width: 15vw;
   }
 `;
 
@@ -51,9 +43,8 @@ const LogoTypo = styled.div`
 `;
 
 function Home(props) {
-  sectionHeight = props.sectionHeight;
 	return (
-    <HomeContainer className="home" bg={bg101} {...props}>
+    <SectionContainerBG className="home" bg={bg1} {...props}>
       <LogoTypo>
         <h1 className="primary">Sapporo</h1>
         <h2 className="secondary">snow festival</h2>
@@ -61,7 +52,7 @@ function Home(props) {
       <MascotContainer sectionHeight={props.sectionHeight}>
         <img src={mascot1} alt="Main mascot"/>
       </MascotContainer>
-    </HomeContainer>
+    </SectionContainerBG>
 	)
 }
 
