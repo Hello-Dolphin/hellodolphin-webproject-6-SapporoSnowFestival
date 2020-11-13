@@ -19,11 +19,11 @@ const SubHeading = styled.h1`
   letter-spacing: .15 em;
 `;
 
-function Present() {
+function Present(props) {
   return (
-    <PresentContainer sectionHeight="100vmin" marginTop="50vmin">
+    <PresentContainer {...props}>
       <Heading>เอสกิโมแหม๊น</Heading>
-      <SubHeading>Present</SubHeading>
+      <SubHeading>Present</SubHeading> 
     </PresentContainer>
   )
 }

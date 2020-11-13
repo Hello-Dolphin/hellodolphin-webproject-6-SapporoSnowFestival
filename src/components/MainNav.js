@@ -29,7 +29,7 @@ const NavBar = styled.div`
     font-weight: bold;
     color: white;
   }
-  & a, .dummy {
+  & a, & span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,9 +39,10 @@ const NavBar = styled.div`
     text-decoration: none;
     color: unset;
   }
-  & a:active, & a:hover {
+  & a:active, & a:hover, & span:active, & span:hover {
     background-color: var(--color-primary);
     color: var(--color-secondary);
+    cursor: pointer;
   }
   & .nav-logo {
     padding: 0 1em;
@@ -74,6 +75,7 @@ function MainNav() {
         <NavItem to="#Activities" text="กิจกรรม" />
         <NavItem to="#Outfits" text="การแต่งกาย" />
         <NavItem to="#About" text="เกี่ยวกับ" />
+        <NavItem to="#Present" text="E" />
       </NavMenu>
       {/* <div className="dummy"></div> */}
     </NavBar>

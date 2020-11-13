@@ -19,9 +19,9 @@ const IntroContainer = styled(SectionContainer)`
   color: white;
 `;
 
-function Intro() {
+function Intro(props) {
   return (
-    <IntroContainer sectionHeight="30vmin">
+    <IntroContainer {...props}>
       <StyledP>
         <StyledSpan>เพลิดเพลิน...</StyledSpan> ไปกับประติมากรรมน้ำแข็งหิมะขนาดยักษ์<br/>และวิวเมืองซัปโปโรที่ขาวโพลนไปด้วยหิมะแสนโรแมนติก
       </StyledP>
