@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Place from './components/Place';
 import Activity from './components/Activity';
+import Producer from './components/Producer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <Place />
       <Activity/>
+      <Producer/>
     </div>
   );
 }

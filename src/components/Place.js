@@ -30,12 +30,12 @@ class Place extends React.Component {
         return (
 
     <div className="content">
-        <h2>สถานที่จัดงาน</h2><br/>
+        <h2 className="header">สถานที่จัดงาน</h2><br/>
 
-        <div class="odori">
+        <div class="odori mb-5">
         <p>{this.state.content}<img src={place1} ref={this.imgRef} className="img"/></p>
         </div>
-
+        <br />
         <button class="button btn1" type="button" onClick={this.changeOdori}>1</button>
         <button class="button btn2" type="button" onClick={this.changeTsudome}>2</button>
         <button class="button btn3" type="button" onClick={this.changeSusukino}>3</button>

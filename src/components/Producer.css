@@ -1,0 +1,25 @@
+
+.carousel-inner{
+    text-align: center;
+}
+.head{
+position: absolute;
+width: 690px;
+height: 45px;
+left: 375px;
+top: 8620px;
+font-size: 64px;
+line-height: 83px;
+display: flex;
+text-align: center;
+color: #FF7E7E;
+}
+
+.carousel button{
+    background-color: #FF7E7E ;
+    border: 2em solid black;
+}
+.carousel{
+    background-color: #FF7E7E ;
+    border: 2em solid black;
+}
