@@ -71,7 +71,7 @@ function MainNav() {
       </NavLogo>
       <NavMenu>
         <NavItem to="#History" text="ความเป็นมา" />
-        <NavItem to="#Locations" text="สถานที่" />
+        <NavItem to="#Sites" text="สถานที่" />
         <NavItem to="#Activities" text="กิจกรรม" />
         <NavItem to="#Outfits" text="การแต่งกาย" />
         <NavItem to="#About" text="เกี่ยวกับ" />

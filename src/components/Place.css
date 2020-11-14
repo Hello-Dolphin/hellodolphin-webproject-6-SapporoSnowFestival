@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@600&display=swap');
+
+.place {
+    position: absolute;
+    width: min(560px, 35vw);
+    border: 1vw solid white;
+    border-radius: 5vw;
+    left: 56vw;
+    top: 5vw;
+}
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: min(2vw, 30px);
+  align-self: center;
+}
+.button{
+    background-color: var(--color-primary);
+    color: white;
+    width: min(90px, 8vw);
+    height: min(90px, 8vw);
+    border-radius: 50%;
+    border: none;
+    font-family: Mitr; 
+    font-weight: 600;
+    font-size: min(48px, 3.5vw);
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px .5vw rgba(0, 0, 0, 0.3);
+}
+.button + .button {
+  margin-left: 3vw;
+}
+.button:hover{
+    background-color: white;
+    color: var(--color-primary);
+    box-shadow: 0px 0px 10px 10px var(--color-primary);
+}
+.button:focus{
+    background-color: white;
+    color: var(--color-primary);
+    box-shadow: 0px 0px 10px 10px var(--color-primary);
+}
+.mascot4{
+    width: 18vw;
+    position: absolute;
+    left: 50vw;
+    top: 32vw;
+}

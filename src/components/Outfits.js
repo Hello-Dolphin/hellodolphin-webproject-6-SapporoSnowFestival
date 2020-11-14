@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { SectionContainerBG, FlexColumnContainer } from './Containers';
 import bg4 from '../assets/images/bg/bg4.png';
@@ -79,15 +79,12 @@ const DetailContainer = styled(FlexColumnContainer)`
   &.animate {
     animation: ${detailFade} .5s both;
   }
-  
   top: 20vw;
   left: 50vw;
   width: min(450px, 35vw);
   align-items: flex-start;
   opacity: 0;
-  transform: translateX(-100px);
-  transition: translateX 1s;
-  `;
+`;
 const PartName = styled.h2`
   color: var(--color-light);
   font-size: min(48px, 3.8vw);
@@ -158,11 +155,7 @@ function Outfits(props) {
     part = part.includes("glove") ? "gloves" : part;
     setPartContent(allPartsContent[part]);
     resetAnimation(detailContainerRef.current);
-    setTimeout(() => {
-      resetAnimation(detailContainerRef.current)
-    }, 500)
   }
-
 
   return (
     <SectionContainerBG bg={bg4} {...props}>
@@ -183,7 +176,6 @@ function Outfits(props) {
         <OutfitPart id="glove_l" onMouseDown={changePartContent}/>
         <OutfitPart id="glove_r" onMouseDown={changePartContent}/>
         <OutfitPart id="shoes" onMouseDown={changePartContent}/>
-        {/* <OutfitPart id="glove_r" class="gloves"/> */}
 
       </Mascot3PartContainer>
     </SectionContainerBG>

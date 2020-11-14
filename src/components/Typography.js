@@ -13,6 +13,8 @@ const Paragraph = styled.p`
   font-size: min(24px, 1.9vw);
   width: ${props => props.width};
   line-height: min(40px, 3.8vw);
+  text-indent: ${props => props.textIndent};
+  text-align: ${props => props.justify ? "justify" : ""};
 `;
 
 export {

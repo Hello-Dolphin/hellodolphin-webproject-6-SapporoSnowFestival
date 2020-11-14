@@ -21,9 +21,13 @@ const FlexColumnContainer = styled(SectionContainer)`
   width: ${props => props.sectionWidth};
   position: ${props => props.absolute ? "absolute" : ""};
 `;
+const FlexRowContainer = styled(FlexColumnContainer)`
+  flex-direction: row;
+`;
 
 export {
   SectionContainer,
   SectionContainerBG,
-  FlexColumnContainer
+  FlexColumnContainer,
+  FlexRowContainer
 };
