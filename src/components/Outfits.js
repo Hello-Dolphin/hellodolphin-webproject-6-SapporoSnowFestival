@@ -19,7 +19,7 @@ import resetAnimation from '../utils/resetAnimation.js';
 const detailFade = keyframes`
   from {
     opacity: 0;
-    transform: translateX(-10vw);
+    transform: translateX(-6vw);
   }
   to {
     opacity: 1;
