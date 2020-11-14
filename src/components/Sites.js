@@ -1,5 +1,5 @@
 import React from 'react';
-import './Place.css';
+import './Sites.css';
 import place1 from '../assets/images/place/place1.png';
 import place2 from '../assets/images/place/place2.png';
 import place3 from '../assets/images/place/place3.png';

@@ -75,7 +75,6 @@ function MainNav() {
         <NavItem to="#Activities" text="กิจกรรม" />
         <NavItem to="#Outfits" text="การแต่งกาย" />
         <NavItem to="#About" text="เกี่ยวกับ" />
-        <NavItem to="#Present" text="E" />
       </NavMenu>
       {/* <div className="dummy"></div> */}
     </NavBar>
