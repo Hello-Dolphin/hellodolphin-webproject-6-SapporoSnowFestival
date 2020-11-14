@@ -5,6 +5,7 @@ const SectionContainer = styled.div`
   width: 100%;
   height: ${props => props.sectionHeight};
   margin-top: ${props => props.marginTop};
+  padding-top: ${props => props.paddingTop};
   ${props => props.bgColor ? `background-color: ${props.bgColor}` : ''};
 `;
 const SectionContainerBG = styled(SectionContainer)`

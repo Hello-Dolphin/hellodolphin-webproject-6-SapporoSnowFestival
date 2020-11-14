@@ -97,7 +97,7 @@ class Activities extends React.Component{
 
 render(){
     return(
-        <SectionContainer {...this.props}>
+        <SectionContainer {...this.props} paddingTop="11vw">
           <FlexColumnContainer>
             <Heading2>มีกิจกรรมอะไรบ้าง</Heading2>
             <SubHeading2>*กดที่รูปภาพเพื่อดูรายละเอียด</SubHeading2>

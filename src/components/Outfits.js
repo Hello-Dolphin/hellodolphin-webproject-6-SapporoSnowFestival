@@ -29,7 +29,7 @@ const detailFade = keyframes`
 
 const Mascot3PartContainer = styled.div`
   position: absolute;
-  top: 18vw;
+  bottom: 58vw;
   left: 24vw;
   transform: scale(.85);
   img {
@@ -158,8 +158,8 @@ function Outfits(props) {
   }
 
   return (
-    <SectionContainerBG bg={bg4} {...props}>
-      <FlexColumnContainer marginTop="4vw" absolute>
+    <SectionContainerBG bg={bg4} paddingTop="11vw" {...props}>
+      <FlexColumnContainer absolute>
         <Heading2>การแต่งกาย</Heading2>
         <SubHeading2>* กดที่เครื่องแต่งกายเพื่อดูรายละเอียด</SubHeading2>
       </FlexColumnContainer>

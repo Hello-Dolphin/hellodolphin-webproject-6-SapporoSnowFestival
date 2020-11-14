@@ -43,7 +43,7 @@ const LogoTypo = styled.div`
 
 function Home(props) {
 	return (
-    <SectionContainerBG className="home" bg={bg1} {...props}>
+    <SectionContainerBG className="home" bg={bg1} paddingTop="11vw" {...props}>
       <LogoTypo>
         <h1 className="primary">Sapporo</h1>
         <h2 className="secondary">snow festival</h2>

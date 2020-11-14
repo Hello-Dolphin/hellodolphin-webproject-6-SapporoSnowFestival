@@ -55,7 +55,7 @@ class Place extends React.Component {
 
     render() {
         return (
-        <SectionContainerBG bg={bg3} {...this.props}>
+        <SectionContainerBG bg={bg3} paddingTop="11vw" {...this.props}>
           <FlexRowContainer>
           <DetailContainer>
             <Heading2>สถานที่จัดงาน</Heading2>
