@@ -158,7 +158,7 @@ function Outfits(props) {
   }
 
   return (
-    <SectionContainerBG bg={bg4} paddingTop="11vw" {...props}>
+    <SectionContainerBG bg={bg4} {...props}>
       <FlexColumnContainer absolute>
         <Heading2>การแต่งกาย</Heading2>
         <SubHeading2>* กดที่เครื่องแต่งกายเพื่อดูรายละเอียด</SubHeading2>

@@ -35,9 +35,9 @@ function App() {
       <Home sectionHeight="80vw" id="Home"/>
       <Intro sectionHeight="25vmin" data-aos="fade-up"/>
       <Present sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up" id="Present"/>
-      <Sites sectionHeight="73vw" marginTop="45vmin" id="Sites"/>
-      <Activities sectionHeight="85vw" marginTop="20vw" id="Activities"/>
-      <Outfits sectionHeight="86vw" marginTop="20vw" id="Outfits"/>
+      <Sites sectionHeight="64vw" marginTop="45vmin" paddingTop="8vw" id="Sites"/>
+      <Activities sectionHeight="85vw" marginTop="18vw" paddingTop="8vw" id="Activities"/>
+      <Outfits sectionHeight="80vw" marginTop="18vw" paddingTop="8vw" id="Outfits"/>
     </>
   );
 }

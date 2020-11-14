@@ -54,6 +54,7 @@ const Activity = (props) => {
 }
 const ActivityContainer = styled.div`
   padding: min(4vw, 100px);
+  margin-top: -3vw;
   img {
     width: min(450px, 30vw);
     transition: 200ms;
@@ -97,10 +98,10 @@ class Activities extends React.Component{
 
 render(){
     return(
-        <SectionContainer {...this.props} paddingTop="11vw">
+        <SectionContainer {...this.props}>
           <FlexColumnContainer>
             <Heading2>มีกิจกรรมอะไรบ้าง</Heading2>
-            <SubHeading2>*กดที่รูปภาพเพื่อดูรายละเอียด</SubHeading2>
+            <SubHeading2>* กดที่รูปภาพเพื่อดูรายละเอียด</SubHeading2>
 
             <ActivityContainer>
               <Activity
