@@ -1,23 +1,34 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import bg1 from '../assets/images/bg/bg1.png';
 import mascot1 from '../assets/images/mascot/mascot1.png';
 import { SectionContainer, SectionContainerBG } from './Containers';
 
+const fadeUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(6vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+`;
+
 const MascotContainer = styled(SectionContainer)`
   display: flex;
   justify-content: center;
-  align-items: center;
   & img {
-    position: relative;
-    top: -3.5vw;
+    position: absolute;
+    bottom: 32vw;
     width: 15vw;
   }
 `;
 
 const LogoTypo = styled.div`
+  animation: ${fadeUp} 1s forwards;
   position: absolute;
   width: 100%;
-  top: 2vw;
+  top: 10vw;
   z-index: 99;
   display: flex;
   flex-direction: column;
@@ -43,7 +54,7 @@ const LogoTypo = styled.div`
 
 function Home(props) {
 	return (
-    <SectionContainerBG className="home" bg={bg1} paddingTop="11vw" {...props}>
+    <SectionContainerBG className="home" bg={bg1} {...props}>
       <LogoTypo>
         <h1 className="primary">Sapporo</h1>
         <h2 className="secondary">snow festival</h2>

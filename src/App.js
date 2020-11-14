@@ -12,8 +12,9 @@ import Outfits from './components/Outfits';
 import Sites from './components/Sites';
 import Activities from './components/Activities';
 
+const appHeight = `${document.body.scrollHeight}px`;
 const Container = styled.div`
-  height: 15000px;
+  /* height: appHeight; */
 `;
 
 function App() {
@@ -27,17 +28,17 @@ function App() {
   }, []);
 
   return (
-    <Container>
+    <>
       {/* <Snow /> */}
-      <MainNav />
+      <MainNav height={appHeight}/>
       {/* <History /> */}
-      <Home sectionHeight="75vw" id="Home"/>
+      <Home sectionHeight="80vw" id="Home"/>
       <Intro sectionHeight="25vmin" data-aos="fade-up"/>
       <Present sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up" id="Present"/>
       <Sites sectionHeight="73vw" marginTop="45vmin" id="Sites"/>
       <Activities sectionHeight="85vw" marginTop="20vw" id="Activities"/>
       <Outfits sectionHeight="86vw" marginTop="20vw" id="Outfits"/>
-    </Container>
+    </>
   );
 }
 

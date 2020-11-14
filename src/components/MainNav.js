@@ -13,7 +13,14 @@ const NavLogo = styled.a.attrs(props => ({
     height: 84px;
   }
 `;
-
+const StyledDiv = styled.div`
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  height: ${props => props.height};
+  /* z-index: 100; */
+`;
 const NavBar = styled.div`
   position: sticky;
   top: 0;
@@ -22,6 +29,7 @@ const NavBar = styled.div`
   justify-content: center;
   align-items: center;
   height: 66px;
+  width: 100%;
   z-index: 100;
   background-color: var(--color-secondary);
   & li {
@@ -58,8 +66,9 @@ const NavMenu = styled.ul`
   
 `;
 
-function MainNav() {
+function MainNav(props) {
 	return (
+    <StyledDiv height={props.height}>
     <NavBar>
       <NavLogo
         to="#Home"
@@ -78,6 +87,7 @@ function MainNav() {
       </NavMenu>
       {/* <div className="dummy"></div> */}
     </NavBar>
+    </StyledDiv>
 	)
 }
 
