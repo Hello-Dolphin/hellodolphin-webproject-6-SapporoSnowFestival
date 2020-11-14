@@ -39,10 +39,10 @@ const Mascot3PartContainer = styled.div`
   & img:not(#mascot) {
     cursor: pointer;
     transform: scale(1);
-    transition: .1s;
+    transition: .2s;
   }
   & img:active:not(#mascot) {
-    transform: scale(0.96);
+    transform: scale(0.97);
     transition: 0s;
   }
   & #mascot {

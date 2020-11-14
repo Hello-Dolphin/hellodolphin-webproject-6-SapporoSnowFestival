@@ -10,7 +10,7 @@ import Present from './components/Present';
 import History from './components/History';
 import Outfits from './components/Outfits';
 import Sites from './components/Sites';
-import Activity from './components/Activity';
+import Activities from './components/Activities';
 
 const Container = styled.div`
   height: 15000px;
@@ -30,8 +30,8 @@ function App() {
     <Container>
       {/* <Snow /> */}
       <MainNav />
+      <Activities sectionHeight="85vw"/>
       <Sites sectionHeight="65vw"/>
-      <Activity/>
       <Outfits sectionHeight="75vw"/>
       <Home sectionHeight="75vw"/>
       <Intro sectionHeight="25vmin" data-aos="fade-up"/>
