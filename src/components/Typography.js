@@ -11,7 +11,7 @@ const SubHeading2 = styled.p`
 const Paragraph = styled.p`
   color: ${props => props.color || "white"};
   font-size: min(24px, 1.9vw);
-  width: ${props => props.width};
+  width: ${props => props.pWidth};
   line-height: min(40px, 3.8vw);
   text-indent: ${props => props.textIndent};
   text-align: ${props => props.justify ? "justify" : ""};

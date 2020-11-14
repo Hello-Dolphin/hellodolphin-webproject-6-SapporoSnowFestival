@@ -77,7 +77,7 @@ const Mascot3PartContainer = styled.div`
 `;
 const DetailContainer = styled(FlexColumnContainer)`
   &.animate {
-    animation: ${detailFade} .5s both;
+    animation: ${detailFade} .5s forwards;
   }
   top: 20vw;
   left: 50vw;

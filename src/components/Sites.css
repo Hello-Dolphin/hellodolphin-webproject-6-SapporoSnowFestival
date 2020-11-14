@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@600&display=swap');
 
-.place {
+.content, .site {
+  opacity: 0;
+}
+
+.site {
     position: absolute;
     width: min(560px, 35vw);
     border: 1vw solid white;
@@ -8,14 +12,16 @@
     left: 56vw;
     top: 5vw;
 }
+
 .btn-group {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  top: min(2vw, 30px);
+  top: min(2.7vw, 35px);
   align-self: center;
 }
+
 .button{
     background-color: var(--color-primary);
     color: white;
@@ -30,22 +36,39 @@
     outline: none;
     box-shadow: 0px .5vw rgba(0, 0, 0, 0.3);
 }
+
 .button + .button {
   margin-left: 3vw;
 }
-.button:hover{
+
+.button:hover, .button:focus {
     background-color: white;
     color: var(--color-primary);
     box-shadow: 0px 0px 10px 10px var(--color-primary);
 }
-.button:focus{
-    background-color: white;
-    color: var(--color-primary);
-    box-shadow: 0px 0px 10px 10px var(--color-primary);
-}
+
 .mascot4{
     width: 18vw;
     position: absolute;
     left: 50vw;
     top: 32vw;
+}
+
+.content.animate {
+  animation: fadeUp .6s forwards;
+}
+
+.site.animate {
+  animation: fadeUp .8s forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(3vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
