@@ -3,14 +3,16 @@
 .content, .site {
   opacity: 0;
 }
-
+.content {
+  margin-top: 1vw;
+}
 .site {
     position: absolute;
-    width: min(560px, 35vw);
-    border: 1vw solid white;
+    width: min(640px, 35vw);
+    border: min(1vw, 12px) solid white;
     border-radius: 5vw;
-    left: 56vw;
-    top: 5vw;
+    left: 57vw;
+    top: 6vw;
 }
 
 .btn-group {
@@ -18,15 +20,15 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  top: min(2.7vw, 35px);
+  top: min(2.8vw, 55px);
   align-self: center;
 }
 
 .button{
     background-color: var(--color-primary);
     color: white;
-    width: min(90px, 8vw);
-    height: min(90px, 8vw);
+    width: min(90px, 7vw);
+    height: min(90px, 7vw);
     border-radius: 50%;
     border: none;
     font-family: Mitr; 
@@ -51,7 +53,7 @@
     width: 18vw;
     position: absolute;
     left: 50vw;
-    top: 32vw;
+    bottom: 14vw;
 }
 
 .content.animate {
