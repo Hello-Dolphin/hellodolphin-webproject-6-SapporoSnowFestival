@@ -34,7 +34,7 @@ function App() {
       <Home sectionHeight="75vw" id="Home"/>
       <Intro sectionHeight="25vmin" data-aos="fade-up"/>
       <Present sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up" id="Present"/>
-      <Sites sectionHeight="80vw" marginTop="45vmin" id="Sites"/>
+      <Sites sectionHeight="62vw" marginTop="45vmin" id="Sites"/>
       <Activities sectionHeight="85vw" marginTop="20vw" id="Activities"/>
       <Outfits sectionHeight="75vw" marginTop="20vw" id="Outfits"/>
     </Container>

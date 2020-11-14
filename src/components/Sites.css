@@ -7,12 +7,11 @@
   margin-top: 1vw;
 }
 .site {
-    position: absolute;
+    /* position: relative; */
     width: min(640px, 35vw);
     border: min(1vw, 12px) solid white;
     border-radius: 5vw;
-    left: 57vw;
-    top: 6vw;
+    margin-left: 4vw;
 }
 
 .btn-group {

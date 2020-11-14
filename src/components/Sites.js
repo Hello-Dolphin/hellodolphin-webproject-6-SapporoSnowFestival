@@ -11,9 +11,10 @@ import styled from 'styled-components';
 import resetAnimation from '../utils/resetAnimation';
 
 const DetailContainer = styled(FlexColumnContainer)`
-  top: 5vw;
-  left: 10vw;
-  width: min(600px, 35vw);
+  /* top: 5vw; */
+  /* left: 10vw; */
+  /* width: min(600px, 35vw); */
+  width: auto;
   align-items: flex-start;
 `;
 
@@ -55,9 +56,10 @@ class Place extends React.Component {
     render() {
         return (
         <SectionContainerBG bg={bg3} {...this.props}>
+          <FlexRowContainer>
           <DetailContainer>
             <Heading2>สถานที่จัดงาน</Heading2>
-            <Paragraph ref={this.contentRef} pWidth="min(670px, 45vw)" textIndent="96px" justify className="content animate">{this.state.content}</Paragraph>
+            <Paragraph ref={this.contentRef} pWidth="min(560px, 40vw)" pHeight="min(230px, 22vw)" textIndent="96px" justify className="content animate">{this.state.content}</Paragraph>
             <div className="btn-group">
               <button class="button btn1" type="button" onClick={this.changeOdori}>1</button>
               <button class="button btn2" type="button" onClick={this.changeTsudome}>2</button>
@@ -65,8 +67,9 @@ class Place extends React.Component {
             </div>
           </DetailContainer>
           <img src={place1} ref={this.imgRef} alt="Sites" className="site animate"/>
+          </FlexRowContainer>
 
-          <img src={mascot4} alot="Mascot 4" className="mascot4"/>
+          <img src={mascot4} alt="Mascot 4" className="mascot4"/>
         </SectionContainerBG>
         )
     }
