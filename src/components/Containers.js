@@ -1,0 +1,29 @@
+import styled from 'styled-components';
+
+const SectionContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: ${props => props.sectionHeight};
+  margin-top: ${props => props.marginTop};
+  ${props => props.bgColor ? `background-color: ${props.bgColor}` : ''};
+`;
+const SectionContainerBG = styled(SectionContainer)`
+  background-image: url(${props => props.bg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+`;
+const FlexColumnContainer = styled(SectionContainer)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: ${props => props.sectionWidth};
+  position: ${props => props.absolute ? "absolute" : ""};
+`;
+
+export {
+  SectionContainer,
+  SectionContainerBG,
+  FlexColumnContainer
+};

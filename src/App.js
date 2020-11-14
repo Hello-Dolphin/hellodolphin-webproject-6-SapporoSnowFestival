@@ -28,7 +28,7 @@ function App() {
     <Container>
       {/* <Snow /> */}
       <MainNav />
-      <Outfits sectionHeight="75vw"/>
+      <Outfits sectionHeight="85vw"/>
       <Home sectionHeight="75vw"/>
       <Intro sectionHeight="25vmin" data-aos="fade-up"/>
       <Present sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up" id="Present"/>

@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import SectionContainer from './SectionContainer';
+import { SectionContainer } from './Containers';
 
 const StyledSpan = styled.span`
-  font-size: 1.5em;
+  font-size: min(24px, 4vw);
   font-weight: bold;
   color: var(--color-primary);
 `;
 const StyledP = styled.p`
   max-width: 720px;
-  font-size: 1.125em;
+  font-size: min(18px, 3vw);
   line-height: 2em;
   text-align: center;
 `;

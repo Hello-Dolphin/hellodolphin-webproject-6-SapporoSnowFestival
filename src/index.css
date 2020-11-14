@@ -1,6 +1,7 @@
 :root {
   --color-primary: #ff7e7e;
   --color-secondary: #1c2b2d;
+  --color-light: #d8e9f0;
 }
 /* mali-regular - thai_latin */
 @font-face {

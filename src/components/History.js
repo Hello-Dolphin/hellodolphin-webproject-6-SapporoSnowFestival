@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SectionContainer from './SectionContainer';
+import { SectionContainer } from './Containers';
 import mascot2 from '../assets/images/mascot/mascot2.png';
 
 const HistoryContainer = styled(SectionContainer)`

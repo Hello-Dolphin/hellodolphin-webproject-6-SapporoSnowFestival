@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import bg1 from '../assets/images/bg/bg1.png';
 import mascot1 from '../assets/images/mascot/mascot1.png';
-import SectionContainer from './SectionContainer';
-import SectionContainerBG from './SectionContainerBG';
+import { SectionContainer, SectionContainerBG } from './Containers';
 
 const MascotContainer = styled(SectionContainer)`
   display: flex;
