@@ -23,14 +23,15 @@ const detailFade = keyframes`
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateZ(0);
   }
 `;
 
 const Mascot3PartContainer = styled.div`
   position: absolute;
-  top: 22vw;
-  left: 20vw;
+  top: 18vw;
+  left: 24vw;
+  transform: scale(.85);
   img {
     position: absolute;
     width: 24vw;
@@ -76,17 +77,20 @@ const Mascot3PartContainer = styled.div`
 `;
 const DetailContainer = styled(FlexColumnContainer)`
   &.animate {
-    animation: ${detailFade} .7s forwards;
+    animation: ${detailFade} .5s both;
   }
-  top: 24vw;
+  
+  top: 20vw;
   left: 50vw;
-  width: min(450px, 40vw);
+  width: min(450px, 35vw);
   align-items: flex-start;
   opacity: 0;
-`;
+  transform: translateX(-100px);
+  transition: translateX 1s;
+  `;
 const PartName = styled.h2`
   color: var(--color-light);
-  font-size: min(48px, 4.2vw);
+  font-size: min(48px, 3.8vw);
   margin-bottom: .3em;
 `;
 
@@ -154,12 +158,15 @@ function Outfits(props) {
     part = part.includes("glove") ? "gloves" : part;
     setPartContent(allPartsContent[part]);
     resetAnimation(detailContainerRef.current);
+    setTimeout(() => {
+      resetAnimation(detailContainerRef.current)
+    }, 500)
   }
 
 
   return (
     <SectionContainerBG bg={bg4} {...props}>
-      <FlexColumnContainer marginTop="5vw" absolute>
+      <FlexColumnContainer marginTop="4vw" absolute>
         <Heading2>การแต่งกาย</Heading2>
         <SubHeading2>* กดที่เครื่องแต่งกายเพื่อดูรายละเอียด</SubHeading2>
       </FlexColumnContainer>
