@@ -5,7 +5,7 @@ function Snow(props) {
     <Particles
             id="theydobevibin"
             style={{position:"absolute", zIndex: 10, left: 0,}}
-            height={props.sectionHeight || "50vmax"}
+            height={props.sectionHeight || "50vw"}
             width="100%"
             options={{
               particles: {

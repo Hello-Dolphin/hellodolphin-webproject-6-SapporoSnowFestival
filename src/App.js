@@ -77,7 +77,7 @@ function App() {
       <Producer waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("producer")}/>}
       id="producer" sectionHeight="78vw" marginTop="20vw" paddingTop="12vw"/>
 
-      {console.log(currentSection)}
+      {/* {console.log(currentSection)} */}
     </>
   );
 }
