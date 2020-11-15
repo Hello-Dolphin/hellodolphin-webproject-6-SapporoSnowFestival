@@ -3,10 +3,12 @@ import styled from 'styled-components';
 const Heading2 = styled.h2`
   color: ${props => props.color || "var(--color-primary)"};
   font-size: min(64px, 5vw);
+  font-weight: bold;
   `;
 const SubHeading2 = styled.p`
   color: ${props => props.color || "white"};
   font-size: min(18px, 1.4vw);
+  font-weight: bold;
   `;
 const Paragraph = styled.p`
   color: ${props => props.color || "white"};
