@@ -18,13 +18,17 @@ import { Waypoint } from 'react-waypoint';
 const setAppHeightThrottled = throttle(300, (callback) => {
   callback(`${document.body.scrollHeight}px`)
 });
+const jumpToSection = debounce(25, (section) => {
+  let target = document.querySelector(`#${section}`);
+  if (!target) return null;
+  target.scrollIntoView();
+})
 
 let setCurrentSectionDebounced;
 
 function App() {
   const [appHeight, setAppHeight] = useState(0);
   const [currentSection, setCurrentSection] = useState("home");
-  const [enableWaypoint, setEnableWaypoint] = useState(true);
 
   AOS.init({
     duration: 1000,
@@ -35,7 +39,7 @@ function App() {
 
   useEffect(() => {
     setCurrentSectionDebounced = debounce(1, false, (section) => {
-      setCurrentSection(section)
+      setCurrentSection(section);
     });
     // setCurrentSectionDebounced = setCurrentSection;
   }, [])
@@ -45,6 +49,7 @@ function App() {
   })
   window.addEventListener("resize", () => {
     setAppHeightThrottled(setAppHeight);
+    jumpToSection(currentSection);
   })
 
   return (
@@ -53,7 +58,7 @@ function App() {
       
       <MainNav appHeight={appHeight} active={currentSection} onClick={setCurrentSection}/>
 
-      <Home waypoint={enableWaypoint && <Waypoint onEnter={() => setCurrentSectionDebounced("home")}/>}
+      <Home waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("home")}/>}
       id="home" sectionHeight="80vw"/>
 
       <Intro waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("intro")}/>}
