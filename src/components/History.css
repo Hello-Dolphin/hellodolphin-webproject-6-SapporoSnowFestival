@@ -6,7 +6,7 @@
     position: absolute;
     width: 40vw;
     bottom: 28vw;
-    animation: scale 2s ease-in-out alternate infinite;  
+    animation: scale .05s ease-in-out alternate infinite;  
     transform-origin: bottom center;
 }
 

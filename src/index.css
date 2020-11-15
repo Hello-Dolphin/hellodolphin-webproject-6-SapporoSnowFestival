@@ -27,12 +27,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #1C2B2D;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace !important ;
 }
 
 * {

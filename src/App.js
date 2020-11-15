@@ -11,6 +11,7 @@ import History from './components/History';
 import Outfits from './components/Outfits';
 import Sites from './components/Sites';
 import Activities from './components/Activities';
+import Producer from './components/Producer';
 import { throttle, debounce } from 'throttle-debounce';
 import { Waypoint } from 'react-waypoint';
 
@@ -70,6 +71,7 @@ function App() {
       <Outfits waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("outfits")}/>}
       id="outfits" sectionHeight="80vw" marginTop="20vw" paddingTop="8vw"/>
 
+      {/* <Producer/> */}
       {console.log(currentSection)}
     </>
   );
