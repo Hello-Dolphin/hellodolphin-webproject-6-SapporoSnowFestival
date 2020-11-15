@@ -4,15 +4,16 @@
     left: 20px;
     top: 3285px; */
     position: absolute;
-    width: 40vw;
-    bottom: 28vw;
-    animation: scale .05s ease-in-out alternate infinite;  
+    width: 46vw;
+    left: -6vw;
+    bottom: 16vw;
+    animation: scale 2s ease-in-out alternate infinite;  
     transform-origin: bottom center;
 }
 
 @keyframes scale{
     0%{
-        transform: rotatez(-6deg);
+        transform: rotatez(-5deg);
         
     }
     100%{

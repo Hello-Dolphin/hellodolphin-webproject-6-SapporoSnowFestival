@@ -3,7 +3,8 @@ import './History.css';
 import snowman from '../assets/images/mascot/mascot2.png'
 import { Heading2, Paragraph } from './Typography';
 import { SectionContainerBG, FlexColumnContainer } from './Containers';
-import bg5 from '../assets/images/bg/bg5.png';
+import bg2f from '../assets/images/bg/bg2f.png';
+import bg2b from '../assets/images/bg/bg2b.png';
 import styled from 'styled-components';
 
 const DetailContainer = styled(FlexColumnContainer)`
@@ -14,6 +15,12 @@ const DetailContainer = styled(FlexColumnContainer)`
   right: 15vw;
   width: auto;
   align-items: flex-end;
+  z-index: 1;
+`;
+const Foreground = styled(SectionContainerBG)`
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
 `;
 
 class History extends React.Component{
@@ -25,7 +32,8 @@ class History extends React.Component{
   }
   render(){
       return(
-        <SectionContainerBG className="history" bg={bg5} {...this.props}>
+        <SectionContainerBG className="history" bg={bg2b} {...this.props}>
+          <Foreground bg={bg2f} sectionHeight={this.props.sectionHeight}/>
           {this.props.waypoint}
           <DetailContainer>
             <Heading2>ความเป็นมา</Heading2>
