@@ -25,10 +25,10 @@ const MascotContainer = styled(SectionContainer)`
 `;
 
 const LogoTypo = styled.div`
-  animation: ${fadeUp} 1s forwards;
+  animation: ${fadeUp} 2s forwards;
   position: absolute;
   width: 100%;
-  top: 10vw;
+  top: 8vw;
   z-index: 99;
   display: flex;
   flex-direction: column;

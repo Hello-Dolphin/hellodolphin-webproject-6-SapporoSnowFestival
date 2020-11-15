@@ -7,7 +7,6 @@ function NavItem(props) {
         if (!target) return null;
         target.scrollIntoView({
           behavior: 'smooth',
-          // block: 'center'
         });
       }}>
         {props.text || props.children}

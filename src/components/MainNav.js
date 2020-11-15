@@ -1,16 +1,15 @@
+import { useRef } from 'react';
 import styled from 'styled-components';
 import NavItem from './NavItem';
 import logoWhite from '../assets/images/logo/logo-white.png'
 import logoDark from '../assets/images/logo/logo-dark.png'
 
-const NavLogo = styled.a.attrs(props => ({
-  href: props.to,
-}))`
+const NavLogoContainer = styled.a`
   position: absolute;
   left: 0;
   & img {
-    width: 84px;
-    height: 84px;
+    width: min(84px, 8vw);
+    height: min(84px, 8vw);
   }
 `;
 const StyledDiv = styled.div`
@@ -43,7 +42,7 @@ const NavBar = styled.div`
     align-items: center;
     padding: 0 3vmax;
     height: 100%;
-    font-size: 1.125em;
+    font-size: min(1.125em, 2vw);
     text-decoration: none;
     color: unset;
   }
@@ -67,23 +66,31 @@ const NavMenu = styled.ul`
 `;
 
 function MainNav(props) {
+  const logoRef = useRef();
+
 	return (
     <StyledDiv height={props.height}>
+      {/* {console.log(props.height)} */}
     <NavBar>
-      <NavLogo
-        to="#Home"
+      <NavLogoContainer
         className="nav-logo"
-        onMouseEnter={() => document.getElementById("logo").setAttribute("src", logoDark)}
-        onMouseLeave={() => document.getElementById("logo").setAttribute("src", logoWhite)}
+        onClick={() => {
+          let target = document.querySelector("#home");
+          target && target.scrollIntoView({
+            behavior: 'smooth',
+          });
+        }}
+        onMouseEnter={() => logoRef.current.setAttribute("src", logoDark)}
+        onMouseLeave={() => logoRef.current.setAttribute("src", logoWhite)}
       >
-        <img src={logoWhite} alt="Brand logo" id="logo"/>
-      </NavLogo>
+        <img src={logoWhite} ref={logoRef} alt="Brand logo" id="logo"/>
+      </NavLogoContainer>
       <NavMenu>
-        <NavItem to="#History" text="ความเป็นมา" />
-        <NavItem to="#Sites" text="สถานที่" />
-        <NavItem to="#Activities" text="กิจกรรม" />
-        <NavItem to="#Outfits" text="การแต่งกาย" />
-        <NavItem to="#About" text="เกี่ยวกับ" />
+        <NavItem to="#history" text="ความเป็นมา" />
+        <NavItem to="#sites" text="สถานที่" />
+        <NavItem to="#activities" text="กิจกรรม" />
+        <NavItem to="#outfits" text="การแต่งกาย" />
+        <NavItem to="#about" text="เกี่ยวกับ" />
       </NavMenu>
       {/* <div className="dummy"></div> */}
     </NavBar>
