@@ -30,7 +30,7 @@ class Place extends React.Component {
         return (
 
     <div className="content">
-        <h2 className="header">สถานที่จัดงาน</h2><br/>
+        <div className="header"><h2 className="location">สถานที่จัดงาน</h2><br/></div>
 
         <div class="odori mb-5">
         <p>{this.state.content}<img src={place1} ref={this.imgRef} className="img"/></p>

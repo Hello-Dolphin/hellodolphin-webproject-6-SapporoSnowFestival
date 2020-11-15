@@ -36,9 +36,6 @@ render(){
             <img src={ac3} className="imgAc"/>
             <p class="detail d2">{this.state.content2}</p>
 
-            <button class="button1" type="button" onClick={this.changeAc1}>1</button>
-            <button class="button2" type="button" onClick={this.changeAc2}>2</button>
-            <button class="button3" type="button" onClick={this.changeAc3}>3</button>
         </div>
     )
 }

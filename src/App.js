@@ -10,8 +10,8 @@ function App() {
     <div>
       <Nav />
       <Home />
-      <Place />
-      <Activity/>
+      {/* <Place />
+      <Activity/> */}
       <Producer/>
     </div>
   );
