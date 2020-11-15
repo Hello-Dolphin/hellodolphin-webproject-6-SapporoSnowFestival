@@ -8,21 +8,21 @@ import Snow from './components/Snow';
 import Intro from './components/Intro';
 import Present from './components/Present';
 import History from './components/History';
-import Story from './components/History';
 import Outfits from './components/Outfits';
 import Sites from './components/Sites';
 import Activities from './components/Activities';
 import { throttle, debounce } from 'throttle-debounce';
-
 import { Waypoint } from 'react-waypoint';
+
 const setAppHeightThrottled = throttle(250, (callback) => {
   callback(`${document.body.scrollHeight}px`)
-  // console.log('aaa"')
-})
+});
+
+let setCurrentSectionDebounced;
 
 function App() {
   const [appHeight, setAppHeight] = useState(0);
-  const [currentSection, setCurrentSection] = useState();
+  const [currentSection, setCurrentSection] = useState("home");
 
   AOS.init({
     duration: 1000,
@@ -30,6 +30,12 @@ function App() {
     // delay: 100,
     anchorPlacement: "center-center",
   });
+
+  useEffect(() => {
+    setCurrentSectionDebounced = debounce(50, true, (section) => {
+      setCurrentSection(section)
+    });
+  }, [])
 
   window.addEventListener("DOMContentLoaded", () => {
     setAppHeightThrottled(setAppHeight);
@@ -42,28 +48,29 @@ function App() {
     <>
       <Snow/>
       <MainNav appHeight={appHeight} active={currentSection}/>
-      {/* <History /> */}
-      <History />
 
-      {/* <Home waypoint={<Waypoint onEnter={() => setCurrentSection("home")}/>}
+      <Home waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("home")}/>}
       id="home" sectionHeight="80vw"/>
-      
-      <Intro waypoint={<Waypoint onEnter={() => setCurrentSection("intro")}/>}
-      id="intro" sectionHeight="25vmin" data-aos="fade-up"/>
-      
-      <Present waypoint={<Waypoint onEnter={() => setCurrentSection("present")}/>}
-      id="present" sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up"/>
-      
-      <Sites waypoint={<Waypoint onEnter={() => setCurrentSection("sites")}/>}
-      id="sites" sectionHeight="min(75vw, 1150px)" marginTop="45vmin" paddingTop="8vw"/>
-      
-      <Activities waypoint={<Waypoint onEnter={() => setCurrentSection("activities")}/>}
-      id="activities" sectionHeight="85vw" marginTop="20vw" paddingTop="8vw"/>
-            
-      <Outfits waypoint={<Waypoint onEnter={() => setCurrentSection("outfits")}/>}
-      id="outfits" sectionHeight="80vw" marginTop="20vw" paddingTop="8vw"/> */}
 
-      {/* {console.log(currentSection)} */}
+      <Intro waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("intro")}/>}
+      id="intro" sectionHeight="25vmin" marginTop="15vw" data-aos="fade-up"/>
+      
+      <Present waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("present")}/>}
+      id="present" sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up"/>
+
+      <History waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("history")}/>}
+      id="history" sectionHeight="85vw" marginTop="40vw" paddingTop="8vw"/>
+      
+      <Sites waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("sites")}/>}
+      id="sites" sectionHeight="min(75vw, 1150px)" marginTop="20vmin" paddingTop="10vw"/>
+      
+      <Activities waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("activities")}/>}
+      id="activities" sectionHeight="85vw" marginTop="20vw" paddingTop="10vw"/>
+            
+      <Outfits waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("outfits")}/>}
+      id="outfits" sectionHeight="80vw" marginTop="20vw" paddingTop="8vw"/>
+
+      {console.log(currentSection)}
     </>
   );
 }
