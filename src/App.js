@@ -47,10 +47,10 @@ function App() {
 
   return (
     <>
+      <Snow/>
       <Producer sectionHeight="78vw" paddingTop="10vw"/>
       <MainNav appHeight={appHeight} active={currentSection}/>
 
-      <Snow/>
       <Home waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("home")}/>}
       id="home" sectionHeight="80vw"/>
 
