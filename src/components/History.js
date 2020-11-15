@@ -1,20 +1,24 @@
-import styled from 'styled-components';
-import { SectionContainer } from './Containers';
-import mascot2 from '../assets/images/mascot/mascot2.png';
+import React from 'react';
+import './History.css';
+import snowman from '../assets/images/mascot/mascot2.png'
 
-const HistoryContainer = styled(SectionContainer)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+class History extends React.Component{
 
-function History(props) {
-  return (
-    <HistoryContainer {...props}>
-
-    </HistoryContainer>
-  )
+    state={
+        object:"เทศกาลหิมะนี้ เริ่มขึ้นมาในปี ค.ศ. 1950 โดยกลุ่มนักเรียน มัธยมที่มาช่วยกันปั้นตุ๊กตาหิมะมากมายในสวนสาธารณะโอโดริ ซึ่งเป็นสวนสาธารณะประจำเมือง นับแต่นั้นเป็นต้นมา ก็มีการ ปั้นหิมะมากขึ้นทุกปีๆ จนกลายมาเป็นเทศกาลใหญ่สุดอลังการ ในปัจจุบัน"   
+    }
+    
+    render(){
+        return(
+    <div className="object">
+        <img class ="test" src={snowman}></img>
+        <h2>ความเป็นมา</h2><br/>
+        <div class="story">
+            <p>{this.state.object}</p>   
+        </div>
+    </div>
+        )
+    }
+    
 }
-
 export default History;

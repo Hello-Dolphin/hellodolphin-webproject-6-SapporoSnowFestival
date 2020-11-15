@@ -8,6 +8,7 @@ import Snow from './components/Snow';
 import Intro from './components/Intro';
 import Present from './components/Present';
 import History from './components/History';
+import Story from './components/History';
 import Outfits from './components/Outfits';
 import Sites from './components/Sites';
 import Activities from './components/Activities';
@@ -42,7 +43,9 @@ function App() {
       <Snow/>
       <MainNav appHeight={appHeight} active={currentSection}/>
       {/* <History /> */}
-      <Home waypoint={<Waypoint onEnter={() => setCurrentSection("home")}/>}
+      <History />
+
+      {/* <Home waypoint={<Waypoint onEnter={() => setCurrentSection("home")}/>}
       id="home" sectionHeight="80vw"/>
       
       <Intro waypoint={<Waypoint onEnter={() => setCurrentSection("intro")}/>}
@@ -58,8 +61,9 @@ function App() {
       id="activities" sectionHeight="85vw" marginTop="20vw" paddingTop="8vw"/>
             
       <Outfits waypoint={<Waypoint onEnter={() => setCurrentSection("outfits")}/>}
-      id="outfits" sectionHeight="80vw" marginTop="20vw" paddingTop="8vw"/>
-      {console.log(currentSection)}
+      id="outfits" sectionHeight="80vw" marginTop="20vw" paddingTop="8vw"/> */}
+
+      {/* {console.log(currentSection)} */}
     </>
   );
 }
