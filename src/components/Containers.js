@@ -5,8 +5,16 @@ const SectionContainer = styled.div`
   width: 100%;
   height: ${props => props.sectionHeight};
   margin-top: ${props => props.marginTop};
+  margin-bottom: ${props => props.marginBottom};
   padding-top: ${props => props.paddingTop};
   ${props => props.bgColor ? `background-color: ${props.bgColor}` : ''};
+  & span[style="font-size: 0px;"] {
+    /* display: block; width: 50%; height: 10px; background-color: red; // For visualiization */
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 const SectionContainerBG = styled(SectionContainer)`
   background-image: url(${props => props.bg});

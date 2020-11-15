@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SectionContainer } from './Containers';
+import { FlexRowContainer } from './Containers';
 
 const StyledSpan = styled.span`
   font-size: min(24px, 4vw);
@@ -11,21 +11,17 @@ const StyledP = styled.p`
   font-size: min(18px, 3vw);
   line-height: 2em;
   text-align: center;
-`;
-const IntroContainer = styled(SectionContainer)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
 `;
 
 function Intro(props) {
   return (
-    <IntroContainer {...props}>
+    <FlexRowContainer {...props}>
+      {props.waypoint}
       <StyledP>
         <StyledSpan>เพลิดเพลิน...</StyledSpan> ไปกับประติมากรรมน้ำแข็งหิมะขนาดยักษ์<br/>และวิวเมืองซัปโปโรที่ขาวโพลนไปด้วยหิมะแสนโรแมนติก
       </StyledP>
-    </IntroContainer>
+    </FlexRowContainer>
   )
 }
 

@@ -13,12 +13,15 @@ import Sites from './components/Sites';
 import Activities from './components/Activities';
 import { throttle, debounce } from 'throttle-debounce';
 
+import { Waypoint } from 'react-waypoint';
 const setAppHeightThrottled = throttle(250, (callback) => {
   callback(`${document.body.scrollHeight}px`)
   // console.log('aaa"')
 })
+
 function App() {
   const [appHeight, setAppHeight] = useState(0);
+  const [currentSection, setCurrentSection] = useState();
 
   AOS.init({
     duration: 1000,
@@ -37,14 +40,26 @@ function App() {
   return (
     <>
       <Snow/>
-      <MainNav height={appHeight}/>
+      <MainNav appHeight={appHeight} active={currentSection}/>
       {/* <History /> */}
-      <Home id="home" sectionHeight="80vw" />
-      <Intro sectionHeight="25vmin" data-aos="fade-up"/>
-      <Present id="present" sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up" />
-      <Sites id="sites" sectionHeight="min(75vw, 1150px)" marginTop="45vmin" paddingTop="8vw" />
-      <Activities id="activities" sectionHeight="85vw" marginTop="18vw" paddingTop="8vw" />
-      <Outfits id="outfits" sectionHeight="80vw" marginTop="18vw" paddingTop="8vw" />
+      <Home waypoint={<Waypoint onEnter={() => setCurrentSection("home")}/>}
+      id="home" sectionHeight="80vw"/>
+      
+      <Intro waypoint={<Waypoint onEnter={() => setCurrentSection("intro")}/>}
+      id="intro" sectionHeight="25vmin" data-aos="fade-up"/>
+      
+      <Present waypoint={<Waypoint onEnter={() => setCurrentSection("present")}/>}
+      id="present" sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up"/>
+      
+      <Sites waypoint={<Waypoint onEnter={() => setCurrentSection("sites")}/>}
+      id="sites" sectionHeight="min(75vw, 1150px)" marginTop="45vmin" paddingTop="8vw"/>
+      
+      <Activities waypoint={<Waypoint onEnter={() => setCurrentSection("activities")}/>}
+      id="activities" sectionHeight="85vw" marginTop="20vw" paddingTop="8vw"/>
+            
+      <Outfits waypoint={<Waypoint onEnter={() => setCurrentSection("outfits")}/>}
+      id="outfits" sectionHeight="80vw" marginTop="20vw" paddingTop="8vw"/>
+      {console.log(currentSection)}
     </>
   );
 }

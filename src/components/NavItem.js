@@ -8,7 +8,9 @@ function NavItem(props) {
         target.scrollIntoView({
           behavior: 'smooth',
         });
-      }}>
+      }}
+        className={props.active === props.to.slice(1) ? "active" : ""}
+      >
         {props.text || props.children}
       </span>
     </li>

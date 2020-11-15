@@ -156,6 +156,7 @@ function Outfits(props) {
 
   return (
     <SectionContainerBG bg={bg4} {...props}>
+      {props.waypoint}
       <FlexColumnContainer absolute>
         <Heading2>การแต่งกาย</Heading2>
         <SubHeading2>* กดที่เครื่องแต่งกายเพื่อดูรายละเอียด</SubHeading2>

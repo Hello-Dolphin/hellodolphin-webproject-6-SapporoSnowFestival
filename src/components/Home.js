@@ -55,6 +55,7 @@ const LogoTypo = styled.div`
 function Home(props) {
 	return (
     <SectionContainerBG className="home" bg={bg1} {...props}>
+      {props.waypoint}
       <LogoTypo>
         <h1 className="primary">Sapporo</h1>
         <h2 className="secondary">snow festival</h2>

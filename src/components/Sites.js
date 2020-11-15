@@ -62,6 +62,7 @@ class Sites extends React.Component {
     render() {
         return (
         <SectionContainerBG bg={bg3} {...this.props}>
+          {this.props.waypoint}
           <FlexRowContainer>
           <DetailContainer>
             <Heading2>สถานที่จัดงาน</Heading2>

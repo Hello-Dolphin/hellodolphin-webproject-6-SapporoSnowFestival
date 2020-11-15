@@ -1,12 +1,6 @@
 import styled from 'styled-components';
-import { SectionContainer } from './Containers';
+import { FlexColumnContainer } from './Containers';
 
-const PresentContainer = styled(SectionContainer)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 const Heading = styled.h1`
   font-size: min(72px, 12vw);
   color: var(--color-primary);
@@ -21,10 +15,11 @@ const SubHeading = styled.h1`
 
 function Present(props) {
   return (
-    <PresentContainer {...props}>
+    <FlexColumnContainer {...props}>
+      {props.waypoint}
       <Heading>เอสกิโมแหม๊น</Heading>
       <SubHeading>Present</SubHeading>
-    </PresentContainer>
+    </FlexColumnContainer>
   )
 }
 

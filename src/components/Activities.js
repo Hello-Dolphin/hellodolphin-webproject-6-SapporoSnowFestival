@@ -99,10 +99,10 @@ class Activities extends React.Component{
 render(){
     return(
         <SectionContainer {...this.props}>
+          {this.props.waypoint}
           <FlexColumnContainer>
             <Heading2>มีกิจกรรมอะไรบ้าง</Heading2>
             <SubHeading2>* กดที่รูปภาพเพื่อดูรายละเอียด</SubHeading2>
-
             <ActivityContainer>
               <Activity
                 src={ac1}

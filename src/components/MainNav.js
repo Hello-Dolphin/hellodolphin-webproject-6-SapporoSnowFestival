@@ -17,7 +17,7 @@ const StyledDiv = styled.div`
   /* top: 0; */
   /* left: 0; */
   width: 100%;
-  height: ${props => props.height};
+  height: ${props => props.appHeight};
   /* z-index: 100; */
 `;
 const NavBar = styled.div`
@@ -46,10 +46,11 @@ const NavBar = styled.div`
     text-decoration: none;
     color: unset;
   }
-  & a:active, & a:hover, & span:active, & span:hover {
+  & a:active, & a:hover, & span:active, & span:hover, & a.active, & span.active {
     background-color: var(--color-primary);
     color: var(--color-secondary);
     cursor: pointer;
+    transition: 200ms;
   }
   & .nav-logo {
     padding: 0 1em;
@@ -69,7 +70,7 @@ function MainNav(props) {
   const logoRef = useRef();
 
 	return (
-    <StyledDiv height={props.height}>
+    <StyledDiv appHeight={props.appHeight}>
       {/* {console.log(props.height)} */}
     <NavBar>
       <NavLogoContainer
@@ -86,11 +87,11 @@ function MainNav(props) {
         <img src={logoWhite} ref={logoRef} alt="Brand logo" id="logo"/>
       </NavLogoContainer>
       <NavMenu>
-        <NavItem to="#history" text="ความเป็นมา" />
-        <NavItem to="#sites" text="สถานที่" />
-        <NavItem to="#activities" text="กิจกรรม" />
-        <NavItem to="#outfits" text="การแต่งกาย" />
-        <NavItem to="#about" text="เกี่ยวกับ" />
+        <NavItem to="#history" text="ความเป็นมา" active={props.active}/>
+        <NavItem to="#sites" text="สถานที่" active={props.active}/>
+        <NavItem to="#activities" text="กิจกรรม" active={props.active}/>
+        <NavItem to="#outfits" text="การแต่งกาย" active={props.active}/>
+        <NavItem to="#about" text="เกี่ยวกับ" active={props.active}/>
       </NavMenu>
       {/* <div className="dummy"></div> */}
     </NavBar>
