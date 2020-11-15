@@ -3,16 +3,16 @@ import styled, { keyframes } from 'styled-components';
 import { SectionContainerBG, FlexColumnContainer } from './Containers';
 import bg4 from '../assets/images/bg/bg4.png';
 import mascot1 from '../assets/images/mascot/mascot1.png'
-import mascot3Hat from '../assets/images/mascot/mascot3/mascot3_hat.png'
-import mascot3HatHover from '../assets/images/mascot/mascot3/mascot3_hat-hover.png'
-import mascot3Jacket from '../assets/images/mascot/mascot3/mascot3_jacket.png'
-import mascot3JacketHover from '../assets/images/mascot/mascot3/mascot3_jacket-hover.png'
-import mascot3Glove_l from '../assets/images/mascot/mascot3/mascot3_glove_left.png'
-import mascot3Glove_lHover from '../assets/images/mascot/mascot3/mascot3_glove_left-hover.png'
-import mascot3Glove_r from '../assets/images/mascot/mascot3/mascot3_glove_right.png'
-import mascot3Glove_rHover from '../assets/images/mascot/mascot3/mascot3_glove_right-hover.png'
-import mascot3Shoes from '../assets/images/mascot/mascot3/mascot3_shoes.png'
-import mascot3ShoesHover from '../assets/images/mascot/mascot3/mascot3_shoes-hover.png'
+import hat from '../assets/images/mascot/mascot3/mascot3_hat.png'
+import hatHover from '../assets/images/mascot/mascot3/mascot3_hat-hover.png'
+import jacket from '../assets/images/mascot/mascot3/mascot3_jacket.png'
+import jacketHover from '../assets/images/mascot/mascot3/mascot3_jacket-hover.png'
+import glove_l from '../assets/images/mascot/mascot3/mascot3_glove_left.png'
+import glove_lHover from '../assets/images/mascot/mascot3/mascot3_glove_left-hover.png'
+import glove_r from '../assets/images/mascot/mascot3/mascot3_glove_right.png'
+import glove_rHover from '../assets/images/mascot/mascot3/mascot3_glove_right-hover.png'
+import shoes from '../assets/images/mascot/mascot3/mascot3_shoes.png'
+import shoesHover from '../assets/images/mascot/mascot3/mascot3_shoes-hover.png'
 import { Heading2, SubHeading2, Paragraph } from './Typography';
 import resetAnimation from '../utils/resetAnimation.js';
 
@@ -79,7 +79,7 @@ const DetailContainer = styled(FlexColumnContainer)`
   &.animate {
     animation: ${detailFade} .5s forwards;
   }
-  top: 20vw;
+  top: 18vw;
   left: 50vw;
   width: min(450px, 35vw);
   align-items: flex-start;
@@ -91,26 +91,22 @@ const PartName = styled.h2`
   margin-bottom: .3em;
 `;
 
-const mascot3Outfits = {
-  mascot3Hat,
-  mascot3HatHover,
-  mascot3Jacket,
-  mascot3JacketHover,
-  mascot3Glove_l,
-  mascot3Glove_lHover,
-  mascot3Glove_r,
-  mascot3Glove_rHover,
-  mascot3Shoes,
-  mascot3ShoesHover
+const outfitsSrc = {
+  hat,
+  hatHover,
+  jacket,
+  jacketHover,
+  glove_l,
+  glove_lHover,
+  glove_r,
+  glove_rHover,
+  shoes,
+  shoesHover
 }
 
-const resolvePartPath = (part, hover) => {
-  part = part.trim();
-  return mascot3Outfits[`mascot3${part[0].toUpperCase()}${part.slice(1)}${hover ? "Hover" : ""}`];
-}
-
-const setImageSrc = ({ target }, hover) => {
-  target.setAttribute("src", resolvePartPath(target.id, hover));
+const setImageSrc = ({ target }, hover = false) => {
+  let part = target.id.trim();
+  target.setAttribute("src", outfitsSrc[`${part}${hover ? "Hover" : ""}`]);
 }
 
 function OutfitPart(props) {
@@ -118,7 +114,7 @@ function OutfitPart(props) {
     <img
       id={props.id}
       class={props.className}
-      src={resolvePartPath(props.id)}
+      src={outfitsSrc[props.id]}
       alt={props.alt || `Mascot ${props.id[0].toUpperCase()}${props.id.slice(1)}`}
       onMouseEnter={(e) => setImageSrc(e, true)}
       onMouseLeave={(e) => setImageSrc(e)}
@@ -127,7 +123,7 @@ function OutfitPart(props) {
   )
 }
 
-const allPartsContent = {
+const partsContent = {
   hat: {
     name: "หมวก",
     desc: "เนื่องจากต้องอยู่กลางแจ้งเป็นเวลานาน จึงควรสวมหมวกไหมพรม และอาจจะใส่ที่ปิดหูด้วยก็ได้"
@@ -153,7 +149,8 @@ function Outfits(props) {
 
   const changePartContent = (part) => {
     part = part.includes("glove") ? "gloves" : part;
-    setPartContent(allPartsContent[part]);
+    if (partContent.name === partsContent[part].name) return;
+    setPartContent(partsContent[part]);
     resetAnimation(detailContainerRef.current);
   }
 

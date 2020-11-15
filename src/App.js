@@ -42,7 +42,7 @@ function App() {
       <Home id="home" sectionHeight="80vw" />
       <Intro sectionHeight="25vmin" data-aos="fade-up"/>
       <Present id="present" sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up" />
-      <Sites id="sites" sectionHeight="64vw" marginTop="45vmin" paddingTop="8vw" />
+      <Sites id="sites" sectionHeight="min(75vw, 1150px)" marginTop="45vmin" paddingTop="8vw" />
       <Activities id="activities" sectionHeight="85vw" marginTop="18vw" paddingTop="8vw" />
       <Outfits id="outfits" sectionHeight="80vw" marginTop="18vw" paddingTop="8vw" />
     </>
