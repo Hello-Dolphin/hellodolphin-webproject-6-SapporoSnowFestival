@@ -24,6 +24,7 @@ let setCurrentSectionDebounced;
 function App() {
   const [appHeight, setAppHeight] = useState(0);
   const [currentSection, setCurrentSection] = useState("home");
+  const [enableWaypoint, setEnableWaypoint] = useState(true);
 
   AOS.init({
     duration: 1000,
@@ -33,9 +34,10 @@ function App() {
   });
 
   useEffect(() => {
-    setCurrentSectionDebounced = debounce(50, true, (section) => {
+    setCurrentSectionDebounced = debounce(1, false, (section) => {
       setCurrentSection(section)
     });
+    // setCurrentSectionDebounced = setCurrentSection;
   }, [])
 
   window.addEventListener("DOMContentLoaded", () => {
@@ -48,10 +50,10 @@ function App() {
   return (
     <>
       <Snow/>
-      <Producer sectionHeight="78vw" paddingTop="10vw"/>
-      <MainNav appHeight={appHeight} active={currentSection}/>
+      
+      <MainNav appHeight={appHeight} active={currentSection} onClick={setCurrentSection}/>
 
-      <Home waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("home")}/>}
+      <Home waypoint={enableWaypoint && <Waypoint onEnter={() => setCurrentSectionDebounced("home")}/>}
       id="home" sectionHeight="80vw"/>
 
       <Intro waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("intro")}/>}
@@ -70,9 +72,11 @@ function App() {
       id="activities" sectionHeight="85vw" marginTop="20vw" paddingTop="10vw"/>
             
       <Outfits waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("outfits")}/>}
-      id="outfits" sectionHeight="80vw" marginTop="20vw" paddingTop="8vw"/>
+      id="outfits" sectionHeight="80vw" marginTop="20vw" paddingTop="10vw"/>
 
-      {/* <Producer/> */}
+      <Producer waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("producer")}/>}
+      id="producer" sectionHeight="78vw" marginTop="20vw" paddingTop="10vw"/>
+
       {console.log(currentSection)}
     </>
   );

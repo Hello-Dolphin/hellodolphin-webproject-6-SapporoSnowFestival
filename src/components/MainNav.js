@@ -78,7 +78,7 @@ function MainNav(props) {
         onClick={() => {
           let target = document.querySelector("#home");
           target && target.scrollIntoView({
-            behavior: 'smooth',
+            behavior: "auto",
           });
         }}
         onMouseEnter={() => logoRef.current.setAttribute("src", logoDark)}
@@ -87,11 +87,11 @@ function MainNav(props) {
         <img src={logoWhite} ref={logoRef} alt="Brand logo" id="logo"/>
       </NavLogoContainer>
       <NavMenu>
-        <NavItem to="#history" text="ความเป็นมา" active={props.active}/>
-        <NavItem to="#sites" text="สถานที่" active={props.active}/>
-        <NavItem to="#activities" text="กิจกรรม" active={props.active}/>
-        <NavItem to="#outfits" text="การแต่งกาย" active={props.active}/>
-        <NavItem to="#about" text="เกี่ยวกับ" active={props.active}/>
+        <NavItem to="#history" text="ความเป็นมา" active={props.active} onClick={props.onClick}/>
+        <NavItem to="#sites" text="สถานที่" active={props.active} onClick={props.onClick}/>
+        <NavItem to="#activities" text="กิจกรรม" active={props.active} onClick={props.onClick}/>
+        <NavItem to="#outfits" text="การแต่งกาย" active={props.active} onClick={props.onClick}/>
+        <NavItem to="#producer" text="จัดทำโดย" active={props.active} onClick={props.onClick}/>
       </NavMenu>
       {/* <div className="dummy"></div> */}
     </NavBar>

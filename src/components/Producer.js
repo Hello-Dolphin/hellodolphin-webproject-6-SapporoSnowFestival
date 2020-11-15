@@ -78,6 +78,7 @@ class Producer extends React.Component{
     render(){
         return(
     <SectionContainerBG bg={bg5} {...this.props}>
+      {this.props.waypoint}
       <Heading2>จัดทำโดย</Heading2>
 
       <div id="carouselWeeeee" className="carousel slide" data-ride="carousel">

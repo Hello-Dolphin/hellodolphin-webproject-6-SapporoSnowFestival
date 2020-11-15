@@ -5,9 +5,11 @@ function NavItem(props) {
       <span onClick={(e) => {
         let target = document.querySelector(props.to);
         if (!target) return null;
-        target.scrollIntoView({
-          behavior: 'smooth',
-        });
+        // console.log(target.getBoundingClientRect())
+        target.scrollIntoView();
+        setTimeout(() => {
+          props.onClick(props.to.slice(1))
+        }, 20)
       }}
         className={props.active === props.to.slice(1) ? "active" : ""}
       >
