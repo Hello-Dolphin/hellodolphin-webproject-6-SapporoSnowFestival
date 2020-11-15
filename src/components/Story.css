@@ -1,0 +1,60 @@
+h2 {
+    position: absolute;
+    width: 421px;
+    height: 52px;
+    left: 764px;
+    top: 3174px;
+
+    font-family: Mali;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 83px;
+    text-align: right;
+    letter-spacing: 0.035em;
+
+    color: #FF7E7E;
+}
+
+p{
+    position: absolute;
+    width: 690px;
+    height: 155px;
+    left: 495px;
+    top: 3262px;
+
+    font-family: Mali;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 43px;
+    text-align: justify;
+
+
+    color: #FFFFFF;
+}
+
+.test{ 
+    height: 432px;
+    width: 432px;
+    left: 20px;
+    top: 3285px;
+    position: absolute;
+    animation: scale 2s ease-in-out infinite;  
+}
+
+@keyframes scale{
+    0%{
+        transform: rotatez(-10deg);
+        
+    }
+    50%{
+        transform: rotateZ(10deg);
+        
+    }
+    100%{
+        transform: rotateZ(-10deg);
+    }
+}
+
+
