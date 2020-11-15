@@ -13,14 +13,14 @@ div{
   text-align: center;
 }
 
-button{
+/* button{
   background-color: #FF7E7E ;
   border:none;
   position: relative;
   top: 40px;
   font-size: 20px;
   box-shadow:  0px 10px 15px ;
-}
+} */
 .carousel{
   border-radius: 50%;
   padding: 15px 18px 12px 13px;
@@ -29,8 +29,4 @@ button{
   margin-left: 70px;
   border-radius: 50%;
   padding: 15px 13px 12px 18px;
-}
-
-button:hover{
-  background-color: white;
 }
