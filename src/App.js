@@ -47,6 +47,7 @@ function App() {
 
   return (
     <>
+    <Producer/>
       <Snow/>
       <MainNav appHeight={appHeight} active={currentSection}/>
 
