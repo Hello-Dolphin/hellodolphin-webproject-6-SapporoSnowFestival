@@ -89,6 +89,7 @@ const PartName = styled.h2`
   color: var(--color-light);
   font-size: min(48px, 3.8vw);
   margin-bottom: .3em;
+  font-weight: bold;
 `;
 
 const outfitsSrc = {

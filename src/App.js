@@ -15,7 +15,7 @@ import Producer from './components/Producer';
 import { throttle, debounce } from 'throttle-debounce';
 import { Waypoint } from 'react-waypoint';
 
-const setAppHeightThrottled = throttle(250, (callback) => {
+const setAppHeightThrottled = throttle(300, (callback) => {
   callback(`${document.body.scrollHeight}px`)
 });
 
@@ -75,7 +75,7 @@ function App() {
       id="outfits" sectionHeight="80vw" marginTop="20vw" paddingTop="10vw"/>
 
       <Producer waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("producer")}/>}
-      id="producer" sectionHeight="78vw" marginTop="20vw" paddingTop="10vw"/>
+      id="producer" sectionHeight="78vw" marginTop="20vw" paddingTop="12vw"/>
 
       {console.log(currentSection)}
     </>

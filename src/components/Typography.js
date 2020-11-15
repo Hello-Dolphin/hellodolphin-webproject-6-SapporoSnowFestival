@@ -17,7 +17,7 @@ const Paragraph = styled.p`
   height: ${props => props.pHeight};
   line-height: min(40px, 3.8vw);
   text-indent: ${props => props.textIndent};
-  text-align: ${props => props.justify ? "justify" : ""};
+  text-align: ${props => props.justify ? "justify" : "left"};
 `;
 
 export {
