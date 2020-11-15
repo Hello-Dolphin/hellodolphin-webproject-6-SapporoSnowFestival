@@ -18,39 +18,45 @@ const DetailContainer = styled(FlexColumnContainer)`
   align-items: flex-start;
 `;
 
-class Place extends React.Component {
+const sitesContent = {
+  odori: {
+    content: "ลานจัดงานโอโดริ คือ ลานจัดงานภายในสวนโอโดริ ซึ่งตั้งอยู่กลางเมืองซัปโปโรทอดยาวจากฝั่งตะวันออกไปยังตะวันตก จัดแสดงประติมากรรม หิมะขนาดยักษ์ตลอดเส้นทางยาวกว่า 1.5 กิโลเมตร แถมยังมีไลท์อัพประดับไฟตอนกลางคืนด้วย",
+    src: place1
+  },
+  tsudome: {
+    content: "ลานจัดงานซึโดมุ คือ ลานจัดงานบริเวณซึโดมุ ซึ่งเป็นฮอลล์อเนกประสงค์ของเมืองซัปโปโร ตั้งอยู่ในเขตชานเมืองของเมืองซัปโปโรใกล้กับสถานี Sakaemachi มีกิจกรรมให้เล่นอย่างสนุกสนานหลายอย่าง เช่น สไลเดอร์จากหิมะขนาดยักษ์",
+    src: place2
+  },
+  susukino: {
+    content: "ลานจัดงานซูซูกิโนะ คือ ลานจัดงานภายในย่านซูซูกิโนะ ซึ่งเป็นย่านของกินของซัปโปโร ภายในงานจัดแสดงประติมากรรมน้ำแข็งเป็นหลัก แถมยังมีลานกว้างสำหรับสัมผัสกับประติมากรรมน้ำแข็งได้และโซนไอซ์บาร์ที่มีบริการเครื่องดื่มด้วย",
+    src: place3
+  }
+}
+
+class Sites extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-        content: "ลานจัดงานโอโดริ คือ ลานจัดงานภายในสวนโอโดริ ซึ่งตั้งอยู่กลางเมืองซัปโปโรทอดยาวจากฝั่งตะวันออกไปยังตะวันตก จัดแสดงประติมากรรม หิมะขนาดยักษ์ตลอดเส้นทางยาวกว่า 1.5 กิโลเมตร แถมยังมีไลท์อัพประดับไฟตอนกลางคืนด้วย",
+      currentSite: "odori",
+      content: sitesContent.odori.content,
+      src: sitesContent.odori.src,
     }
     this.imgRef = React.createRef();
     this.contentRef = React.createRef();
   }
 
-  changeOdori = () => {
-      this.imgRef.current.setAttribute("src", place1)
-      resetAnimation(this.contentRef.current);
-      resetAnimation(this.imgRef.current);
-      this.setState({
-        content: "ลานจัดงานซึโดมุ คือ ลานจัดงานบริเวณซึโดมุ ซึ่งเป็นฮอลล์อเนกประสงค์ของเมืองซัปโปโร ตั้งอยู่ในเขตชานเมืองของเมืองซัปโปโรใกล้กับสถานี Sakaemachi มีกิจกรรมให้เล่นอย่างสนุกสนานหลายอย่าง เช่น สไลเดอร์จากหิมะขนาดยักษ์"
-      })
-  }
-  
-  changeTsudome = () =>{
-      this.imgRef.current.setAttribute("src", place2)
-      resetAnimation(this.contentRef.current);
-      resetAnimation(this.imgRef.current);
-      this.setState({
-        content: "ลานจัดงานโอโดริ คือ ลานจัดงานภายในสวนโอโดริ ซึ่งตั้งอยู่กลางเมืองซัปโปโรทอดยาวจากฝั่งตะวันออกไปยังตะวันตก จัดแสดงประติมากรรม หิมะขนาดยักษ์ตลอดเส้นทางยาวกว่า 1.5 กิโลเมตร แถมยังมีไลท์อัพประดับไฟตอนกลางคืนด้วย"
-      })
-  }
-  changeSusukino = () =>{
-      this.imgRef.current.setAttribute("src", place3)
-      resetAnimation(this.contentRef.current);
-      resetAnimation(this.imgRef.current);
-      this.setState({content : "ลานจัดงานซูซูกิโนะ คือ ลานจัดงานภายในย่านซูซูกิโนะ ซึ่งเป็นย่านของกินของซัปโปโร ภายในงานจัดแสดงประติมากรรมน้ำแข็งเป็นหลัก แถมยังมีลานกว้างสำหรับสัมผัสกับประติมากรรมน้ำแข็งได้และโซนไอซ์บาร์ที่มีบริการเครื่องดื่มด้วย"})
+  handleClick = (siteName) => {
+    siteName = siteName.toLowerCase();
+    if (this.state.currentSite == siteName) return;
+    let siteContent = sitesContent[siteName];
+    this.setState({
+      currentSite: siteName,
+      content: siteContent.content,
+      src: siteContent.src
+    })
+    resetAnimation(this.contentRef.current);
+    resetAnimation(this.imgRef.current);
   }
 
     render() {
@@ -59,14 +65,22 @@ class Place extends React.Component {
           <FlexRowContainer>
           <DetailContainer>
             <Heading2>สถานที่จัดงาน</Heading2>
-            <Paragraph ref={this.contentRef} pWidth="min(560px, 40vw)" pHeight="min(230px, 22vw)" textIndent="96px" justify className="content animate">{this.state.content}</Paragraph>
+            <Paragraph ref={this.contentRef}
+              pWidth="min(560px, 40vw)"
+              pHeight="min(230px, 22vw)"
+              textIndent="96px"
+              justify
+              className="content animate"
+            >
+              {this.state.content}
+            </Paragraph>
             <div className="btn-group">
-              <button class="button btn1" type="button" onClick={this.changeOdori}>1</button>
-              <button class="button btn2" type="button" onClick={this.changeTsudome}>2</button>
-              <button class="button btn3" type="button" onClick={this.changeSusukino}>3</button>
+              <button class="button btn1" type="button" onClick={() => this.handleClick("odori")}>1</button>
+              <button class="button btn2" type="button" onClick={() => this.handleClick("tsudome")}>2</button>
+              <button class="button btn3" type="button" onClick={() => this.handleClick("susukino")}>3</button>
             </div>
           </DetailContainer>
-          <img src={place1} ref={this.imgRef} alt="Sites" className="site animate"/>
+          <img src={this.state.src} ref={this.imgRef} alt="Sites" className="site animate"/>
           </FlexRowContainer>
 
           <img src={mascot4} alt="Mascot 4" className="mascot4"/>
@@ -75,4 +89,4 @@ class Place extends React.Component {
     }
 }
 
-export default Place;
+export default Sites;
