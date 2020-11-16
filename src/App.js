@@ -68,7 +68,7 @@ function App() {
       id="home" sectionHeight="80vw"/>
 
       <Intro waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("intro")}/>}
-      id="intro" sectionHeight="25vmin" marginTop="25vw" data-aos="fade-up"/>
+      id="intro" sectionHeight="15vmin" marginTop="25vw" data-aos="fade-up"/>
       
       <Present waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("present")}/>}
       id="present" sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up"/>
