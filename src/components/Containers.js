@@ -4,6 +4,7 @@ const SectionContainer = styled.div`
   position: relative;
   width: 100%;
   height: ${props => props.sectionHeight};
+  max-height: ${props => props.sectionMaxHeight};
   margin-top: ${props => props.marginTop};
   margin-bottom: ${props => props.marginBottom};
   padding-top: ${props => props.paddingTop};
@@ -11,7 +12,7 @@ const SectionContainer = styled.div`
   & span[style="font-size: 0px;"] {
     /* display: block; width: 50%; height: 10px; background-color: red; // For visualiization */
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 50%;
     transform: translateX(-50%);
   }

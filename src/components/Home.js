@@ -49,6 +49,7 @@ const LogoTypo = styled.div`
     font-size: 3.2vw;
     letter-spacing: .27em;
     color: white;
+    font-weight: 700;
   }
 `;
 

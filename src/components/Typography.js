@@ -29,6 +29,7 @@ const Paragraph = styled.p`
   text-align: ${props => props.justify ? "justify" : "left"};
   @media (max-width: 768px) {
     font-size: 1.9vw;
+    text-indent: 10vw;
   }
 `;
 

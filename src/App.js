@@ -30,27 +30,34 @@ function App() {
   const [appHeight, setAppHeight] = useState(0);
   const [currentSection, setCurrentSection] = useState("home");
 
-  AOS.init({
-    duration: 1000,
-    easing: "ease-out",
-    // delay: 100,
-    anchorPlacement: "center-center",
-  });
-
   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out",
+      // delay: 100,
+      anchorPlacement: "center-center",
+    });
     setCurrentSectionDebounced = debounce(1, false, (section) => {
       setCurrentSection(section);
     });
     setCurrentSectionDebounced = setCurrentSection;
+    window.addEventListener("DOMContentLoaded", () => {
+      setAppHeightThrottled(setAppHeight);
+    })
+    window.addEventListener("resize", () => {
+      setAppHeightThrottled(setAppHeight);
+      // jumpToSection(currentSection);
+    })
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Home") {
+        setTimeout(() => {
+          setCurrentSection("home");
+        }, 20)
+      }
+    })
   }, [])
 
-  window.addEventListener("DOMContentLoaded", () => {
-    setAppHeightThrottled(setAppHeight);
-  })
-  window.addEventListener("resize", () => {
-    setAppHeightThrottled(setAppHeight);
-    // jumpToSection(currentSection);
-  })
+
 
   return (
     <div className="App">
@@ -71,16 +78,16 @@ function App() {
       id="history" sectionHeight="85vw" marginTop="40vw" paddingTop="8vw"/>
       
       <Sites waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("sites")}/>}
-      id="sites" sectionHeight="min(75vw, 1150px)" marginTop="20vmin" paddingTop="10vw"/>
+      id="sites" sectionHeight="75vw" sectionMaxHeight="1150px" marginTop="20vmin" paddingTop="10vw"/>
       
       <Activities waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("activities")}/>}
       id="activities" sectionHeight="85vw" marginTop="20vw" paddingTop="10vw"/>
             
       <Outfits waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("outfits")}/>}
-      id="outfits" sectionHeight="80vw" marginTop="20vw" paddingTop="10vw"/>
+      id="outfits" sectionHeight="85vw" marginTop="30vw" paddingTop="10vw"/>
 
       <Producer waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("producer")}/>}
-      id="producer" sectionHeight="78vw" marginTop="20vw" paddingTop="12vw"/>
+      id="producer" sectionHeight="78vw" marginTop="30vw" paddingTop="12vw"/>
 
       {/* {console.log(currentSection)} */}
     </div>
