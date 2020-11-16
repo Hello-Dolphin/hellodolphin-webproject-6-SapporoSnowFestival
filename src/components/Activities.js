@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import ac1 from '../assets/images/activity/ac1.png'
 import ac2 from '../assets/images/activity/ac2.png'
 import ac3 from '../assets/images/activity/ac3.png'
@@ -22,6 +22,7 @@ const allActivitiesSrc = {
 const Activity = (props) => {
   const [active, setActive] = useState(false);
   const [showContent, setShowContent] = useState(false);
+  const nodeRef = useRef();
 
   const setImageSrc = ({ target }, hover) => {
     if (active) return;
@@ -44,8 +45,9 @@ const Activity = (props) => {
         classNames="content"
         onEnter={() => setShowContent(true)}
         onExited={() => setShowContent(false)}
+        nodeRef={nodeRef}
       >
-        <Paragraph pWidth="min(560px, 40vw)" pMaxWidth="40vw">
+        <Paragraph ref={nodeRef} pWidth="min(560px, 40vw)" pMaxWidth="40vw">
           {showContent && props.content}
         </Paragraph>
       </CSSTransition>

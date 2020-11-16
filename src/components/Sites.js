@@ -77,9 +77,9 @@ class Sites extends React.Component {
               {this.state.content}
             </Paragraph>
             <div className="btn-group">
-              <button class="button btn1" type="button" onClick={() => this.handleClick("odori")}>1</button>
-              <button class="button btn2" type="button" onClick={() => this.handleClick("tsudome")}>2</button>
-              <button class="button btn3" type="button" onClick={() => this.handleClick("susukino")}>3</button>
+              <button className="button btn1" type="button" onClick={() => this.handleClick("odori")}>1</button>
+              <button className="button btn2" type="button" onClick={() => this.handleClick("tsudome")}>2</button>
+              <button className="button btn3" type="button" onClick={() => this.handleClick("susukino")}>3</button>
             </div>
           </DetailContainer>
           <img src={this.state.src} ref={this.imgRef} alt="Sites" className="site animate"/>

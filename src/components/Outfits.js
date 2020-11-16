@@ -119,7 +119,7 @@ function OutfitPart(props) {
   return (
     <img
       id={props.id}
-      class={props.className}
+      className={props.className}
       src={outfitsSrc[props.id]}
       alt={props.alt || `Mascot ${props.id[0].toUpperCase()}${props.id.slice(1)}`}
       onMouseEnter={(e) => setImageSrc(e, true)}

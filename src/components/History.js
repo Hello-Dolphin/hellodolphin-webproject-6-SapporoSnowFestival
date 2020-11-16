@@ -45,7 +45,7 @@ class History extends React.Component{
               justify
             >{this.state.content}</Paragraph>   
           </DetailContainer>
-          <img class ="snowman" alt="Snowman" src={snowman}></img>
+          <img className="snowman" alt="Snowman" src={snowman}></img>
         </SectionContainerBG>
       )
   }
