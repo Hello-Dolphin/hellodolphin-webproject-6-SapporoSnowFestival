@@ -69,13 +69,13 @@ function App() {
       id="home" sectionHeight="80vw"/>
 
       <Intro waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("intro")}/>}
-      id="intro" sectionHeight="25vmin" marginTop="15vw" data-aos="fade-up"/>
+      id="intro" sectionHeight="25vmin" marginTop="25vw" data-aos="fade-up"/>
       
       <Present waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("present")}/>}
       id="present" sectionHeight="25vmin" marginTop="50vmin" data-aos="fade-up"/>
 
       <History waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("history")}/>}
-      id="history" sectionHeight="85vw" marginTop="40vw" paddingTop="8vw"/>
+      id="history" sectionHeight="75vw" marginTop="40vw" paddingTop="4vw"/>
       
       <Sites waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("sites")}/>}
       id="sites" sectionHeight="75vw" sectionMaxHeight="1150px" marginTop="20vmin" paddingTop="10vw"/>
@@ -84,7 +84,7 @@ function App() {
       id="activities" sectionHeight="85vw" marginTop="20vw" paddingTop="10vw"/>
             
       <Outfits waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("outfits")}/>}
-      id="outfits" sectionHeight="85vw" marginTop="30vw" paddingTop="10vw"/>
+      id="outfits" sectionHeight="80vw" marginTop="30vw" paddingTop="10vw"/>
 
       <Producer waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("producer")}/>}
       id="producer" sectionHeight="78vw" marginTop="30vw" paddingTop="12vw"/>

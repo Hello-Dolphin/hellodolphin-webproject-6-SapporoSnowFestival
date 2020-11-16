@@ -15,7 +15,7 @@ function Snow(props) {
                   direction: 'bottom',
                 },
                 size: {
-                  value: 4,
+                  value: 2.5,
                   random: {
                     enable: true,
                     minimumValue: .5
@@ -34,10 +34,11 @@ function Snow(props) {
                   }
                 },
                 number: {
-                  limit: 100,
+                  // limit: 100,
+                  number: 200,
                   density: {
                     enable: true,
-                    area: 150,
+                    area: 100,
                   }
                 },
               },

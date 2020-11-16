@@ -37,8 +37,6 @@ const NavBar = styled.div`
   background-color: var(--color-secondary);
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    /* background-color: red; */
     max-height: 8vw;
     & a, & span {
       font-size: 2vw;
