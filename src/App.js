@@ -41,7 +41,7 @@ function App() {
     setCurrentSectionDebounced = debounce(1, false, (section) => {
       setCurrentSection(section);
     });
-    // setCurrentSectionDebounced = setCurrentSection;
+    setCurrentSectionDebounced = setCurrentSection;
   }, [])
 
   window.addEventListener("DOMContentLoaded", () => {
