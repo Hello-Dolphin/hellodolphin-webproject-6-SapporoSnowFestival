@@ -49,7 +49,7 @@ function App() {
   })
   window.addEventListener("resize", () => {
     setAppHeightThrottled(setAppHeight);
-    jumpToSection(currentSection);
+    // jumpToSection(currentSection);
   })
 
   return (
