@@ -25,8 +25,9 @@ const Paragraph = styled.p`
   max-width: ${props => props.pMaxWidth};
   height: ${props => props.pHeight};
   line-height: min(40px, 3.8vw);
-  text-indent: ${props => props.textIndent};
+  /* text-indent: ${props => props.textIndent}; */
   text-align: ${props => props.justify ? "justify" : "left"};
+  text-justify: inter-character;
   @media (max-width: 768px) {
     font-size: 1.9vw;
     text-indent: 10vw;
