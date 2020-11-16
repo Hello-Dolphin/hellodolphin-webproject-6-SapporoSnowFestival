@@ -91,6 +91,10 @@ const PartName = styled.h2`
   font-size: min(48px, 3.8vw);
   margin-bottom: .3em;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 3.8vw;
+  }
 `;
 
 const outfitsSrc = {

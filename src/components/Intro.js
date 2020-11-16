@@ -7,11 +7,16 @@ const StyledSpan = styled.span`
   color: var(--color-primary);
 `;
 const StyledP = styled.p`
+  width: 80vw;
   max-width: 720px;
   font-size: min(18px, 3vw);
   line-height: 2em;
   text-align: center;
   color: white;
+  @media (max-width: 768px) {
+    font-size: 3vw;
+    max-width: 80vw;
+  }
 `;
 
 function Intro(props) {

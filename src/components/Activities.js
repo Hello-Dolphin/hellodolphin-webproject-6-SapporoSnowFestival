@@ -45,7 +45,7 @@ const Activity = (props) => {
         onEnter={() => setShowContent(true)}
         onExited={() => setShowContent(false)}
       >
-        <Paragraph pWidth="min(560px, 40vw)">
+        <Paragraph pWidth="min(560px, 40vw)" pMaxWidth="40vw">
           {showContent && props.content}
         </Paragraph>
       </CSSTransition>
