@@ -11,6 +11,7 @@ import Outfits from './components/Outfits';
 import Sites from './components/Sites';
 import Activities from './components/Activities';
 import Producer from './components/Producer';
+import Footer from './components/Footer';
 import { throttle, debounce } from 'throttle-debounce';
 import { Waypoint } from 'react-waypoint';
 
@@ -88,6 +89,7 @@ function App() {
       <Producer waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("producer")}/>}
       id="producer" sectionHeight="78vw" marginTop="25vw" paddingTop="14vw"/>
 
+      <Footer sectionHeight="5vw" paddingTop="2vw"/>
       {/* {console.log(currentSection)} */}
     </div>
   );
