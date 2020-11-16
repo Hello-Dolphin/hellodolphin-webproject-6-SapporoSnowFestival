@@ -20,7 +20,9 @@ const StyledDiv = styled.div`
   /* left: 0; */
   width: 100%;
   height: ${props => props.appHeight};
+  
   /* z-index: 100; */
+  
 `;
 const NavBar = styled.div`
   position: sticky;
@@ -33,6 +35,17 @@ const NavBar = styled.div`
   width: 100%;
   z-index: 100;
   background-color: var(--color-secondary);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    /* background-color: red; */
+    max-height: 8vw;
+    & a, & span {
+      font-size: 2vw;
+      padding: 0 1vw;
+    }
+  }
+
   & li {
     height: 100%;
     font-weight: bold;
@@ -65,7 +78,6 @@ const NavMenu = styled.ul`
   align-items: center;
   height: 100%;
   list-style: none;
-  
 `;
 
 function MainNav(props) {
@@ -78,10 +90,13 @@ function MainNav(props) {
       <NavLogoContainer
         className="nav-logo"
         onClick={() => {
+          // console.log(123)
           let target = document.querySelector("#home");
-          target && target.scrollIntoView({
-            behavior: "auto",
-          });
+          if (!target) return null;
+          target.scrollIntoView();
+          setTimeout(() => {
+            props.onClick("home");
+          }, 20)
         }}
         onMouseEnter={() => logoRef.current.setAttribute("src", logoDark)}
         onMouseLeave={() => logoRef.current.setAttribute("src", logoWhite)}
