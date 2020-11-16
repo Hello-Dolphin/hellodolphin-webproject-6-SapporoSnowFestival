@@ -63,16 +63,16 @@ class Producer extends React.Component{
     imgRefRight= React.createRef();
 
     changeHoverLeft=()=>{
-        this.imgRefLeft.current.setAttribute("src", hoverLeft)
-    }
-    changeLeft=()=>{
-        this.imgRefLeft.current.setAttribute("src", left)
-    }
-    changeHoverRight=()=>{
-        this.imgRefRight.current.setAttribute("src", hoverRight)
-    }
-    changeRight=()=>{
-        this.imgRefRight.current.setAttribute("src", right)
+        this.imgRefLeft.current.style.backgroundImage = `url(${hoverLeft})`;
+      }
+      changeLeft=()=>{
+        this.imgRefLeft.current.style.backgroundImage = `url(${left})`;
+      }
+      changeHoverRight=()=>{
+        this.imgRefRight.current.style.backgroundImage = `url(${hoverRight})`;
+      }
+      changeRight=()=>{
+        this.imgRefRight.current.style.backgroundImage = `url(${right})`;
     }
 
     render(){
