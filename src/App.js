@@ -53,7 +53,7 @@ function App() {
   })
 
   return (
-    <>
+    <div className="App">
       <Snow/>
       
       <MainNav appHeight={appHeight} active={currentSection} onClick={setCurrentSection}/>
@@ -83,7 +83,7 @@ function App() {
       id="producer" sectionHeight="78vw" marginTop="20vw" paddingTop="12vw"/>
 
       {/* {console.log(currentSection)} */}
-    </>
+    </div>
   );
 }
 

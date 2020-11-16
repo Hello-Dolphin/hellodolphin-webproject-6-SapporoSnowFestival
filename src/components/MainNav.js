@@ -10,6 +10,8 @@ const NavLogoContainer = styled.a`
   & img {
     width: min(84px, 8vw);
     height: min(84px, 8vw);
+    max-width: 8vw;
+    max-height: 8vw;
   }
 `;
 const StyledDiv = styled.div`

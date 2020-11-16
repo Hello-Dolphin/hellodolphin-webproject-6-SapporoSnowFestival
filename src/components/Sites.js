@@ -68,6 +68,7 @@ class Sites extends React.Component {
             <Heading2>สถานที่จัดงาน</Heading2>
             <Paragraph ref={this.contentRef}
               pWidth="min(560px, 40vw)"
+              pMaxWidth="40vw"
               pHeight="min(230px, 22vw)"
               textIndent="96px"
               justify

@@ -39,6 +39,7 @@ class History extends React.Component{
             <Heading2>ความเป็นมา</Heading2>
             <Paragraph
               pWidth="min(690px, 48vw)"
+              pMaxWidth="48vw"
               pHeight="min(230px, 22vw)"
               textIndent="96px"
               justify

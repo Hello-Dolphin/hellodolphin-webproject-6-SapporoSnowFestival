@@ -9,6 +9,7 @@
 .site {
     /* position: relative; */
     width: min(640px, 35vw);
+    max-width: 35vw;
     border: min(1vw, 12px) solid white;
     border-radius: 5vw;
     margin-left: 4vw;
@@ -27,7 +28,9 @@
     background-color: var(--color-primary);
     color: white;
     width: min(90px, 7vw);
+    max-width: 7vw;
     height: min(90px, 7vw);
+    max-height: 7vw;
     border-radius: 50%;
     border: none;
     font-family: Mitr; 

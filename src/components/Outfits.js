@@ -82,6 +82,7 @@ const DetailContainer = styled(FlexColumnContainer)`
   top: 18vw;
   left: 50vw;
   width: min(450px, 35vw);
+  max-width: 35vw;
   align-items: flex-start;
   opacity: 0;
 `;

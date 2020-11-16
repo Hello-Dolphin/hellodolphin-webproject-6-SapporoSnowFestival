@@ -9,11 +9,12 @@ const SubHeading2 = styled.p`
   color: ${props => props.color || "white"};
   font-size: min(18px, 1.4vw);
   font-weight: bold;
-  `;
+`;
 const Paragraph = styled.p`
   color: ${props => props.color || "white"};
   font-size: min(24px, 1.9vw);
   width: ${props => props.pWidth};
+  max-width: ${props => props.pMaxWidth};
   height: ${props => props.pHeight};
   line-height: min(40px, 3.8vw);
   text-indent: ${props => props.textIndent};
