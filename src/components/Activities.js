@@ -57,7 +57,7 @@ const ActivityContainer = styled.div`
   margin-top: -3vw;
   img {
     /* width: min(450px, 30vw); */
-    max-width: 30vw;
+    max-width: 25vw;
     transition: 200ms;
   }
   img:hover {

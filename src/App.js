@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import AOS from 'aos';
 import { useEffect, useState } from 'react';
 import 'aos/dist/aos.css';
@@ -87,7 +86,7 @@ function App() {
       id="outfits" sectionHeight="80vw" marginTop="30vw" paddingTop="10vw"/>
 
       <Producer waypoint={<Waypoint onEnter={() => setCurrentSectionDebounced("producer")}/>}
-      id="producer" sectionHeight="78vw" marginTop="30vw" paddingTop="12vw"/>
+      id="producer" sectionHeight="78vw" marginTop="25vw" paddingTop="14vw"/>
 
       {/* {console.log(currentSection)} */}
     </div>

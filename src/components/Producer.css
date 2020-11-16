@@ -1,5 +1,6 @@
 .carousel-inner{
   text-align: center;
+  /* overflow: visible; */
 }
 .head{
   color: #FF7E7E;

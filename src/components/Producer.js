@@ -11,8 +11,8 @@ import right from '../assets/images/button/right1.png';
 import hoverLeft from '../assets/images/button/left2.png';
 import hoverRight from '../assets/images/button/right2.png';
 
-import { Heading2, Paragraph } from './Typography';
-import { SectionContainerBG, FlexColumnContainer } from './Containers';
+import { Heading2 } from './Typography';
+import { SectionContainerBG } from './Containers';
 import bg5 from '../assets/images/bg/bg5.png';
 import styled from 'styled-components';
 

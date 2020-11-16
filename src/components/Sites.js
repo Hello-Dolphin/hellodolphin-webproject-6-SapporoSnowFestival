@@ -48,7 +48,7 @@ class Sites extends React.Component {
 
   handleClick = (siteName) => {
     siteName = siteName.toLowerCase();
-    if (this.state.currentSite == siteName) return;
+    if (this.state.currentSite === siteName) return;
     let siteContent = sitesContent[siteName];
     this.setState({
       currentSite: siteName,
