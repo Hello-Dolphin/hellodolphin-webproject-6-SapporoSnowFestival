@@ -18,7 +18,7 @@ import { Waypoint } from 'react-waypoint';
 const setAppHeightThrottled = throttle(300, (callback) => {
   callback(`${document.body.scrollHeight}px`)
 });
-const jumpToSection = debounce(25, (section) => {
+const jumpToSection = debounce(1, (section) => {
   let target = document.querySelector(`#${section}`);
   if (!target) return null;
   target.scrollIntoView();
